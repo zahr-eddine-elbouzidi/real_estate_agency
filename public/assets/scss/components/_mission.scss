@@ -1,0 +1,64 @@
+/*============================
+20. Start Mission Area Style
+==============================*/
+
+.mission-heading-wrap {
+  margin-bottom: 75px;
+
+  @media #{$sm-device} {
+    margin-bottom: 37px;
+  }
+
+  @media #{$md-device} {
+    margin-bottom: 52px;
+  }
+
+  h4, h2 {
+    color: $white;
+    font-weight: 600;
+    font-family: $baseFont;
+  }
+
+  h4 {
+    margin-bottom: 23px;
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 50px;
+
+    @media #{$sm-device} {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    @media #{$md-device} {
+      font-size: 35px;
+      margin-right: 50px;
+    }
+
+    @media only screen and (min-width: 1601px) {
+      margin-right: 210px;
+    }
+  }
+}
+
+.mission-image-wrap {
+  text-align: center;
+  @media #{$sm-device} {
+    margin-bottom: 30px;
+  }
+
+  @media #{$md-device} {
+    margin-bottom: 40px;
+  }
+
+  img {
+    @media #{$xl-device} {
+      width: 70%;
+    }
+    @media #{$md-device} {
+      width: 60%;
+    }
+  }
+}

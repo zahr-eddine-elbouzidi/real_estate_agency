@@ -1,0 +1,33 @@
+/*==========================
+23. Start FAQ Area Style
+===========================*/
+.faq-content-left {
+  @media #{$md-device} {
+    margin-bottom: 50px;
+  }
+  @media #{$sm-device} {
+    margin-bottom: 35px;
+  }
+
+  h3 {
+    font-family: $baseFont;
+    font-weight: 500;
+    margin-bottom: 45px;
+
+    @media #{$sm-device} {
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: $brandColor;
+    }
+  }
+
+  ul {
+    margin-top: 40px;
+
+    @media #{$sm-device} {
+      margin-top: 25px;
+    }
+  }
+}

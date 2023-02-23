@@ -1,0 +1,73 @@
+<div class="space-40"></div>
+<section class="section-case-study">
+                <div class="container">
+            
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="ot-heading mb-0">
+                                <span>// Dernières annonces</span>
+                                <h2 class="main-heading">Annonces</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 align-self-end">
+                            <p class="mb-0">We’ve exceled our experience in a wide range of industries to bring valuable insights and provide our customers.</p>
+                        </div>
+                        <div class="col-lg-2 align-self-end">
+                            <div class="ot-button">
+                                <a href="portfolio-grid.html" class="btn-details"><i class="flaticon-right-arrow-1"></i>En savoir plus.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="project-filter-wrapper pt-50">
+                                <div class="projects-grid projects-style-1 projects-col3 projects-no-gaps">
+                                    
+
+                                <?php if(isset($postsAnnonces)): ?>
+                                    <?php foreach($postsAnnonces as $post_annonce): ?>
+
+                                    <div class="project-item design ideas">
+                                        <div class="projects-box">
+                                            <div class="projects-thumbnail">
+                                                <a href="portfolio-details-1.html">
+                                                    <img src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= $post_annonce['filename']; ?>" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="portfolio-info ">
+                                                <a class="overlay" href="portfolio-details-1.html"></a>                                
+                                                <div class="portfolio-info-inner">
+                                                    
+                                                    <h5><a href="portfolio-details-1.html"><?= $post_annonce['title']; ?></a></h5>
+                                                    <p class="portfolio-cates">
+                                                        <a href="#"><?= $post_annonce['name_fr']; ?></a><span>/</span>
+                                                        <a href="#"><?= $post_annonce['sub_name_fr']; ?></a>
+                                                    </p> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                        <?php endif; ?>
+
+                                 
+                                
+                                   
+                                 
+                                
+                                    
+
+                                
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </section>
+
+
+            

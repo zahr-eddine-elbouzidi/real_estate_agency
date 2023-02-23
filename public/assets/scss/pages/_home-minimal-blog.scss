@@ -1,0 +1,49 @@
+/*==========================================
+12. Start Home Minimal Blog Page
+===========================================*/
+
+.blog-minimal-top {
+  margin-top: 20px;
+
+  img {
+    @media #{$sm-device} {
+      max-width: 60%;
+    }
+  }
+}
+
+.blog-minimal-sidebar {
+  @media #{$md-device} {
+    margin-top: 80px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 60px;
+  }
+
+  .instagram-feed {
+    h3 {
+      font-family: $fontPD;
+      margin-bottom: 23px;
+
+      @media #{$xlmax-device} {
+        font-size: 28px;
+      }
+    }
+
+    .instagram-gallery {
+      @media #{$xl-device, $lg-device} {
+        margin-top: -30px;
+      }
+
+      .instagram-item {
+        margin-top: 30px;
+
+        @media #{$sm-device, $md-device} {
+          width: calc(100% / 3);
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

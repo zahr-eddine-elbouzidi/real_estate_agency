@@ -1,0 +1,402 @@
+/*==========================================
+14. Start Hero Banner Area Style
+===========================================*/
+
+.hero-content {
+  &-conference {
+    padding: 255px 0 30px;
+
+    @media #{$md-device, $sm-device} {
+      padding-top: 180px;
+    }
+
+    h2, h4 {
+      color: $white;
+      font-family: $baseFont;
+    }
+
+    h4 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+
+      @media #{$sm-device} {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    h2 {
+      font-size: 90px;
+      margin-bottom: 70px;
+
+      @media #{$md-device} {
+        font-size: 70px;
+      }
+
+      @media #{$sm-device} {
+        font-size: 50px;
+      }
+    }
+
+    .countdown-wrap {
+      padding: 15px 20px;
+      .ht-countdown {
+        .countdown-item {
+          &__time {
+            font-size: 30px;
+
+            @media #{$sm-device} {
+              font-size: 20px;
+            }
+          }
+
+          &__label{
+            @media #{$sm-device} {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--fashion-store {
+    padding: 250px 15px;
+
+    @media #{$md-device} {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    @media #{$sm-device} {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    h2 {
+      color: $white;
+      font-family: $fontPD;
+      font-size: 100px;
+      line-height: 1.2;
+      margin-bottom: 42px;
+
+      @media #{$md-device} {
+        font-size: 80px;
+      }
+
+      @media #{$sm-device} {
+        font-size: 45px;
+      }
+    }
+  }
+
+  &--designer {
+    margin-top: 20px;
+
+    @media #{$md-device,$sm-device} {
+      margin-top: 50px;
+    }
+
+    .designer {
+      &-title {
+        margin-top: 35px;
+      }
+
+      &-info {
+        margin-top: 40px;
+
+        h4 {
+          font-family: $baseFont;
+          color: $brandColor;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &--freelancer {
+    height: 700px;
+    @include centerY;
+
+    @media #{$lg-device} {
+      height: 600px;
+    }
+
+    @media #{$md-device} {
+      height: auto;
+      margin-top: 40px;
+      padding-bottom: 80px;
+    }
+
+    @media #{$sm-device} {
+      height: auto;
+      margin-top: 30px;
+      padding-bottom: 60px;
+    }
+
+    h2 {
+      line-height: 1;
+      font-family: $headingFont;
+      margin-bottom: 50px;
+
+      @media #{$xl-device} {
+        font-size: 90px;
+      }
+
+      @media #{$lg-device} {
+        font-size: 60px;
+      }
+
+      @media #{$md-device} {
+        margin-bottom: 25px;
+      }
+      @media #{$sm-device} {
+        margin-bottom: 20px;
+      }
+
+      span {
+        color: $brandColor;
+      }
+    }
+
+    h5 {
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 500;
+      color: $brandColor;
+      letter-spacing: 5px;
+      margin: 0;
+    }
+  }
+
+  &--presentation {
+    h2 {
+      line-height: 1;
+      color: $white;
+
+      @media #{$lg-device, $xl-device} {
+        font-size: 100px;
+        margin-bottom: 30px;
+      }
+
+      @media #{$md-device} {
+        font-size: 60px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &--product-landing {
+    height: 100vh;
+    @include centerY;
+
+    h2 {
+      font-size: 89px;
+      line-height: 1;
+      color: $white;
+      margin-bottom: 60px;
+
+      @media #{$md-device} {
+        font-size: 60px;
+        margin-bottom: 40px;
+      }
+
+      @media #{$sm-device} {
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .btn-hvr-brand {
+      border-color: $white;
+      font-size: 16px;
+
+      &:hover {
+        background-color: $white;
+        color: $brandColor;
+      }
+    }
+  }
+
+  &--side-menu {
+    h2 {
+      font-size: 95px;
+      color: $white;
+
+      @media #{$md-device,$lg-device} {
+        font-size: 60px;
+      }
+
+      @media #{$sm-device} {
+        font-size: 40px;
+      }
+    }
+
+    h4 {
+      color: $white;
+      font-size: 30px;
+      margin-bottom: 40px;
+
+      @media #{$sm-device} {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &--artist {
+    @media #{$lg-device,$xl-device} {
+      margin-bottom: 100px;
+    }
+
+    img {
+      @media #{$sm-device} {
+        max-width: 200px;
+      }
+    }
+
+    h3 {
+      color: $white;
+      font-size: 40px;
+      font-weight: 400;
+      margin: 20px 0 150px;
+
+      @media #{$sm-device} {
+        margin-bottom: 40px;
+        font-size: 26px;
+      }
+    }
+
+    .social-icons {
+      a {
+        font-size: 26px;
+
+        &:hover {
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
+
+// Hero Freelancer Thumbnail
+.hero-freelance-image {
+  @media #{$xl-device} {
+    margin-right: -316px;
+  }
+  @media #{$lg-device} {
+    margin-right: -290px;
+  }
+}
+
+// Video Background
+.video-bg-wrap {
+  height: 100vh;
+  position: relative;
+  @include centerY;
+  z-index: 1;
+
+  .video-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    video, iframe {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+/*=============================
+Home Fashion Store Hero Banner
+==============================*/
+
+.promo-bar-wrap {
+  background: linear-gradient(left, rgb(242, 0, 70) 0%, rgb(255, 175, 1) 100%);
+  padding: 15px 0;
+
+  h4 {
+    margin-bottom: 0;
+    color: $white;
+    font-family: $baseFont;
+    font-weight: 400;
+    font-size: 17px;
+
+    @media #{$sm-device} {
+      font-size: 16px;
+    }
+
+    &:before {
+      content: '\f0a2';
+      font-family: $fa-icon;
+      margin-right: 10px;
+    }
+  }
+}
+
+/*=============================
+Hero category Box Style
+==============================*/
+.hero-cate-box-inner {
+  background-color: $white;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  padding: 20px 0;
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$sm-device} {
+    padding: 15px;
+  }
+
+  @media #{$xxs-device} {
+    padding: 0 20px;
+  }
+}
+
+.cate-box-item {
+  border-right: 1px solid $borderColor;
+  padding: 40px 15px;
+  text-align: center;
+  width: calc(100% / 4);
+
+  @media #{$sm-device} {
+    border-bottom: 1px solid $borderColor;
+    width: calc(100% / 2);
+
+    &:nth-child(2n + 2) {
+      border-right: none;
+    }
+
+    &:nth-child(1n + 3) {
+      border-bottom: none;
+    }
+
+  }
+
+  @media #{$xxs-device} {
+    border-right: none;
+    width: 100%;
+    border-bottom: 1px solid $borderColor !important;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+
+    a {
+      color: $blackSoft;
+
+      &:hover {
+        color: $headingColor;
+      }
+    }
+  }
+}

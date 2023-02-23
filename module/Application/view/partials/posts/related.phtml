@@ -1,0 +1,73 @@
+<?php $i = 0; if(isset($relatedPosts)) : ?>
+                                <div class="post-nav clearfix">
+                                <?php foreach($relatedPosts as $previous): $i++; ?>
+                                    <?php if($i == 1): ?>
+                                        <div class="post-prev">
+                                    <?php elseif($i == 2): ?>
+                                        <div class="post-next">
+                                    <?php endif; ?>
+                                        <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $previous['slug'],
+                                                                                'sub_category_name' => $previous['sub_slug'],
+                                                                                'post_name' => $previous['post_slug']]) ?>">
+                                            <div class="thumb">
+                                                <img width=70  height=70 src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($previous)) ? $previous['filename'] : null; ?>" alt="">
+                                            </div>
+                                            <div class="entry-header">
+                                                <h6><?= (isset($previous)) ? $previous['title'] : null; ?></h6>
+                                                <span class="post-on"><span class="entry-date"><?= (isset($previous)) ? date('d-m-Y H:i', strtotime($previous['created_at']))  : null; ?></span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <?php endforeach; ?>
+                                   
+                                </div>
+                                <div class="post-relate">
+                                    <h2>Articles similaires</h2>
+                                    <div class="row">
+
+                                    
+                                        <?php foreach($relatedPosts as $relatedPost) : ?>
+                                        <div class="col-md-6">
+                                            <div class="post-box blog-item relate-box">
+                                                <div class="post-inner">
+                                                    <div class="entry-media">
+                                                        <div class="post-cat">
+                                                            <span class="posted-in">
+                                                                <a href="#" rel="category tag"><?= (isset($relatedPost)) ? $relatedPost['name_fr'] : null; ?></a>
+                                                            </span>
+                                                        </div>                                    
+                                                        <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $relatedPost['slug'],
+                                                                                'sub_category_name' => $relatedPost['sub_slug'],
+                                                                                'post_name' => $relatedPost['post_slug']]) ?>"><img width=420  height=320 src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($relatedPost)) ? $relatedPost['filename'] : null; ?>" alt=""></a>
+                                                    </div>                         
+                                                    <div class="inner-post">
+                                                        <div class="entry-header">
+                                                            <div class="entry-meta">
+                                                                <span class="posted-on">Publié le : <a href="#"><?= (isset($relatedPost)) ? date('d-m-Y H:i', strtotime($relatedPost['created_at']))  : null; ?></a></span>
+                                                                <span class="byline"> _<a class="url fn n" href="#">Admin IEW</a></span>
+                                                            </div><!-- .entry-meta -->
+                                                            
+                                                            <h4 class="entry-title"><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $relatedPost['slug'],
+                                                                                'sub_category_name' => $relatedPost['sub_slug'],
+                                                                                'post_name' => $relatedPost['post_slug']]) ?>"><?= (isset($relatedPost)) ? $relatedPost['title'] : null; ?></a></h4>
+                                                        </div><!-- .entry-header -->
+                                                        
+                                                        <div class="btn-readmore">
+                                                            <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $relatedPost['slug'],
+                                                                                'sub_category_name' => $relatedPost['sub_slug'],
+                                                                                'post_name' => $relatedPost['post_slug']]) ?>"><i class="flaticon-right-arrow-1"></i>Lire</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endforeach; ?>
+    
+
+                                    </div>
+                                </div>
+ <?php endif; ?> 

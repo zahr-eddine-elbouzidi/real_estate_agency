@@ -1,0 +1,96 @@
+/*===============================
+49. Start Tab Element Style CSS
+================================*/
+.nav{
+  &.tab-nav-2{
+    li{
+      a{
+        background-color: $borderColor;
+        color: $blackSoft;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 30px;
+        position: relative;
+
+        &:hover,&.active{
+          background-color: $brandColor;
+          color: $white;
+        }
+
+        &.active{
+          &:before{
+            border-color: $brandColor transparent transparent;
+            border-width: 9px 8.5px 0;
+            border-style: solid;
+            content: "";
+            position: absolute;
+            bottom: -9px;
+            left: 50%;
+            margin-left: -8px;
+            width: 0;
+            height: 0;
+            transition: all .5s;
+          }
+        }
+      }
+    }
+  }
+
+  &.tab-nav-3{
+    li{
+      width: 100%;
+
+      &:not(:last-child){
+        margin-bottom: 2px;
+      }
+
+      a{
+        background-color: $borderColor;
+        color: $blackSoft;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 30px;
+        position: relative;
+
+        &:hover,&.active{
+          background-color: $brandColor;
+          color: $white;
+        }
+
+        &.active{
+          &:before{
+            border-color: transparent transparent transparent $brandColor;
+            border-width: 8.5px 0 8.5px 9px;
+            border-style: solid;
+            content: "";
+            position: absolute;
+            right: -9px;
+            top: 50%;
+            margin-top: -8.5px;
+            width: 0;
+            height: 0;
+            transition: all .5s;
+            z-index: 2;
+
+            @media #{$sm-device} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab-content{
+  &--2{
+    border: 2px solid $borderColor;
+    padding: 50px 30px;
+
+    @media #{$sm-device} {
+      padding: 35px 15px 30px;
+    }
+  }
+}

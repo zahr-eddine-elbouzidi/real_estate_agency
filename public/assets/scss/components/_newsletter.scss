@@ -1,0 +1,140 @@
+/*=============================
+27. Start Newsletter Style
+===============================*/
+.newsletter-area {
+  padding: 90px 0;
+
+  @media #{$sm-device} {
+    padding: 60px 0;
+  }
+}
+
+.newsletter-form-content {
+  justify-content: flex-end;
+  align-items: center;
+
+  @media #{$md-device, $sm-device} {
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  @media #{$xs-device} {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $borderColor;
+    color: $paragraph;
+    padding: 10px 20px 10px 0;
+    width: 65%;
+
+    @media #{$xs-device} {
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: $paragraph;
+    }
+  }
+
+  &--white {
+    input {
+      border-bottom-color: $white;
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+
+  &--product-landing {
+    margin-top: 40px;
+
+    @media #{$md-device} {
+      text-align: center;
+    }
+
+    @media #{$sm-device} {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .btn {
+      color: $white;
+      margin-top: 40px;
+
+      @media #{$sm-device} {
+        margin-top: 25px;
+      }
+
+      @media #{$xs-device} {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background-color: $white;
+        border-color: $white;
+        color: $brandColor;
+      }
+    }
+  }
+}
+
+.newsletter-text {
+  &--white {
+    h4 {
+      color: $white;
+    }
+  }
+
+  &--product-landing {
+    color: $white;
+
+    @media #{$xl-device} {
+      max-width: 70%;
+    }
+
+    h3 {
+      font-family: $baseFont;
+      color: $white;
+      font-weight: 500;
+      margin-top: -7px;
+    }
+  }
+}
+
+.newsletter-banner {
+  &--landing {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+
+    @media #{$md-device, $sm-device} {
+      position: static;
+      width: 100%;
+    }
+
+    @media #{$md-device} {
+      margin-top: -80px;
+      height: 450px;
+      margin-bottom: 40px;
+    }
+
+    @media #{$sm-device} {
+      height: 300px;
+      margin-top: -60px;
+      margin-bottom: 30px;
+    }
+  }
+}

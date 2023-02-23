@@ -1,0 +1,104 @@
+/*==========================
+02. Color CSS
+============================*/
+// Background Colors
+.bg {
+
+  &-white {
+    background-color: $white;
+  }
+
+  &-offWhite {
+    background-color: $offWhite;
+  }
+
+  &-whitesoft {
+    background-color: $softWhite;
+  }
+
+  &-brand {
+    background-color: $brandColor;
+  }
+
+  &-black {
+    background-color: $black;
+  }
+
+  &-blackSoft {
+    background-color: $blackSoft;
+  }
+
+  &-gradient {
+    background: rgb(121, 47, 250);
+    background: linear-gradient(left, rgb(121, 47, 250) 0%, rgb(13, 80, 170) 100%);
+  }
+
+  &-gradient-2 {
+    background: rgb(194, 30, 82);
+    background: linear-gradient(45deg, rgb(194, 30, 82) 43%, rgb(34, 63, 143) 100%);
+  }
+
+  &-gradient-3 {
+    background: rgb(10, 255, 198);
+    background: linear-gradient(left, rgba(10, 255, 198, 0.8) 43%, rgba(34, 63, 143, 0.81) 100%);
+  }
+
+  &-gradient-4 {
+    background: rgb(30, 136, 212);
+    background: linear-gradient(left, rgb(30, 136, 212) 0%, rgb(13, 80, 169) 100%);
+  }
+
+  &-violet {
+    background-color: $violet;
+  }
+
+  &-navy {
+    background-color: $navy;
+  }
+}
+
+// Text Colors
+.color {
+  &-brand {
+    color: $brandColor;
+  }
+
+  &-secondary {
+    color: $secondaryColor;
+  }
+}
+
+
+// Font Family
+.text {
+  &-pd {
+    font-family: $fontPD;
+  }
+
+  &-base {
+    font-family: $baseFont;
+  }
+}
+
+.gradient-bg-item{
+  color: $white;
+  padding: 50px;
+  height: 100%;
+
+  @media #{$md-device} {
+    padding: 30px;
+  }
+
+  @media #{$sm-device} {
+    padding: 30px 15px;
+  }
+
+  h2,h3,h4{
+    color: $white;
+  }
+
+  h3{
+    font-size: 30px;
+    font-weight: 600;
+  }
+}

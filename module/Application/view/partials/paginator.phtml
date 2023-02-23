@@ -1,0 +1,62 @@
+
+<?php  // in module/Application/view/partial/paginator.phtml: ?>
+<?php if ($this->pageCount): ?>
+
+
+
+    <div class="entry-content">
+            <div class="container">
+                <div class="row">
+                    <div class="content-area col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <ul class="page-pagination none-style">
+                          <!-- Previous page link -->
+                            <?php if (isset($this->previous)): ?>
+                            
+                                <li>
+                                    <a class="prev page-numbers" href="<?= $this->url($this->route, ['action' => 'q'], ['query' => ['search' => $this->search , 'page' => $this->previous]]) ?>"><i class="flaticon-back"></i></a>
+                                </li>
+
+                            <?php else: ?>
+                                <li>
+                                <a class="prev page-numbers disabled" href="#">
+                                    <i class="flaticon-back"></i>
+                                </a>
+                                </li>
+                            <?php endif ?>
+
+                             <!-- Numbered page links -->
+                            <?php foreach ($this->pagesInRange as $page): ?>
+                                <?php if ($page !== $this->current): ?>
+                            
+                                <li><a class="page-numbers" href="<?= $this->url($this->route, ['action' => 'q'], ['query' => ['search' => $this->search, 'page' => $page]]) ?>"> <?= $page ?></a></li>
+                                <?php else: ?>
+ 
+                                <li><span aria-current="page" class="page-numbers current"><?= $page ?></span></li>
+                                <?php endif ?>
+                            <?php endforeach ?>
+
+
+                              <!-- Next page link -->
+                            <?php if (isset($this->next)): ?>
+                              
+                                <li><a class="next page-numbers" href="<?= $this->url($this->route, ['action' => 'q'], ['query' => ['search' => $this->search, 'page' => $this->next]]) ?>"><i class="flaticon-right-arrow-1"></i></a></li>
+                            <?php else: ?>
+                                <li class="page-item disabled">
+                                <a class="next page-numbers" href="#">
+                                    <i class="flaticon-right-arrow-1"></i>
+                                </a>
+                                </li>
+                            <?php endif ?>
+
+
+                                                   </ul>
+                    </div>
+                </div>
+            </div>
+ </div>
+
+
+
+
+ 
+<?php endif ?>

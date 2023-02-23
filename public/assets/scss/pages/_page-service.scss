@@ -1,0 +1,167 @@
+/*===============================
+  39. Start Service Page Style
+================================*/
+
+/*
+  Service Split Page Style
+*/
+
+.service-split-wrapper {
+  .ms-left, .ms-right {
+    @media #{$md-device,$sm-device} {
+      width: 100% !important;
+    }
+  }
+
+  .ms-left {
+    @media #{$md-device,$sm-device} {
+      z-index: 1;
+    }
+  }
+
+  .service-split {
+    &-content, &-img {
+      height: 100%;
+    }
+
+    &-content {
+      background-color: $brandColor;
+      color: $white;
+      @include centerY;
+      padding: 0 200px;
+      overflow-y: auto;
+
+      @media #{$lg-device} {
+        padding: 30px 50px 30px 80px;
+      }
+
+      @media #{$sm-device} {
+        padding: 20px 20px 20px 50px;
+      }
+
+      @media #{$md-device,$sm-device} {
+        background-color: rgba($black, 0.7);
+      }
+
+      .icon {
+        font-size: 80px;
+        line-height: 1;
+      }
+
+      h3 {
+        color: $white;
+        font-size: 32px;
+        font-weight: 500;
+        margin: 30px 0 40px;
+
+        @media #{$lg-device,$sm-device} {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
+
+#multiscroll-nav {
+  @media #{$xl-device} {
+    margin-left: 20px;
+  }
+
+  li {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    span {
+      border: 3px solid rgba($white, 0.5);
+      height: 16px;
+      width: 16px;
+    }
+
+    .active {
+      span {
+        border-color: $white;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/*
+  Service Page
+*/
+.service-page-thumb {
+  @media #{$xl-device} {
+    margin-right: -400px;
+  }
+  @media #{$lg-device} {
+    display: none;
+  }
+}
+
+.service-working-process-wrap {
+  .icon-box {
+    &-icon {
+      font-weight: 500;
+      font-family: $headingFont;
+      font-size: 36px;
+      flex-basis: 50px;
+      max-width: 50px;
+    }
+
+    &-info {
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $blackSoft;
+      }
+    }
+  }
+}
+
+.service-call-to-action {
+  height: 100%;
+  @include center;
+  font-size: 15px;
+  color: $white;
+
+  @media #{$md-device} {
+    height: 400px;
+  }
+
+  @media #{$sm-device} {
+    height: 350px;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  .btn, h3 {
+    color: $white;
+  }
+
+  .btn {
+    margin-top: 30px;
+
+    &:hover {
+      background-color: $white;
+      border-color: $white;
+      color: $brandColor;
+    }
+  }
+}
+
+/*
+  Service Flip Board
+*/
+
+.service-flip-board-area{
+  .service-item{
+    margin-top: 30px;
+  }
+}

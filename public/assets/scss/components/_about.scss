@@ -1,0 +1,341 @@
+/*================================
+05. Start About Section Style
+=================================*/
+
+.about {
+  &-content {
+    &-agency-portfolio {
+      margin-top: 100px;
+
+      @media #{$xl-device} {
+        padding-left: 30px;
+      }
+
+      @media #{$md-device} {
+        margin-top: 73px;
+      }
+
+      @media #{$sm-device} {
+
+        margin-top: 32px;
+      }
+
+      @media #{$xxs-device} {
+        margin-top: 30px;
+      }
+
+      h2 {
+        margin-bottom: 75px;
+
+        @media #{$md-device} {
+          margin-bottom: 46px;
+        }
+
+        @media #{$sm-device} {
+          margin-bottom: 17px;
+        }
+      }
+    }
+
+    &-conference {
+      h6 {
+        color: $brandColor;
+        font-weight: 500;
+        font-size: 18px;
+        font-family: $baseFont;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-weight: 500;
+        margin-bottom: 27px;
+
+        @media #{$xl-device, $lg-device} {
+          font-size: 52px;
+        }
+
+        @media #{$sm-device} {
+          margin-bottom: 17px;
+        }
+      }
+
+      .btn {
+        margin-top: 22px;
+      }
+    }
+
+    &-app-landing {
+      font-size: 15px;
+      @extend .sp-y;
+
+      @media #{$lg-device, $md-device, $sm-device} {
+        padding: 0;
+      }
+
+      h2 {
+        font-size: 100px;
+        font-weight: 200;
+        line-height: 80px;
+        margin-top: 45px;
+        margin-bottom: 40px;
+
+        @media #{$lg-device} {
+          font-size: 80px;
+        }
+
+        @media #{$md-device,$sm-device} {
+          font-size: 50px;
+          line-height: 1;
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+
+        @media #{$sm-device} {
+          font-size: 40px;
+        }
+
+        strong {
+          font-weight: 500;
+
+          @media #{$xl-device} {
+            display: block;
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 30px;
+
+        @media #{$md-device,$sm-device} {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-product-landing {
+      h2 {
+        font-size: 60px;
+        font-family: $baseFont;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-bottom: 28px;
+
+        @media #{$sm-device,$md-device} {
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .btn {
+        margin-top: 18px;
+
+        @media #{$sm-device} {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-onepage {
+      h2 {
+        color: $brandColor;
+        font-family: $fontPD;
+        position: relative;
+        line-height: 1;
+        z-index: 1;
+
+        @media #{$lg-device,$xl-device} {
+          font-size: 70px;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -40px;
+        }
+
+        @media #{$md-device} {
+          margin-top: 30px;
+        }
+
+        @media #{$sm-device} {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &-artist {
+      margin-bottom: 0;
+
+      @media #{$sm-device} {
+        margin-top: 38px;
+      }
+
+      .btn {
+        margin-top: 42px;
+
+        i{
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+
+        @media #{$sm-device} {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    h1, h2, h3, h4 {
+      span {
+        color: $brandColor;
+      }
+    }
+
+    &.light {
+      color: $white;
+
+      h2, h3, h6 {
+        color: $white;
+      }
+    }
+  }
+
+  &-thumb {
+    img {
+      width: 100%;
+    }
+
+    &--multipurpose {
+      @media #{$xl-device} {
+        margin-right: -325px;
+      }
+
+      @media #{$md-device} {
+        padding-bottom: 30px;
+      }
+
+      @media #{$sm-device} {
+        padding-bottom: 20px;
+      }
+    }
+
+    &--creative-agency {
+      @media #{$xl-device} {
+        margin-right: -155px;
+      }
+    }
+  }
+
+  &-feature {
+    &--creative-agency {
+      @media #{$md-device} {
+        margin-top: 50px;
+      }
+
+      @media #{$sm-device} {
+        margin-top: 35px;
+      }
+
+      .icon-box {
+        margin-top: 100px;
+
+        @media #{$md-device} {
+          margin-top: 50px;
+        }
+
+        @media #{$sm-device} {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+.popup-video {
+  position: relative;
+  overflow: hidden;
+
+  & > img {
+    transition: 0.4s;
+  }
+
+  .btn-video-popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    & > img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.dropcap-heading {
+  position: relative;
+  text-align: left;
+  text-transform: none;
+  max-width: 310px;
+
+  @media #{$md-device} {
+    margin-left: 131px;
+  }
+
+  @media #{$sm-device} {
+    max-width: 100%;
+  }
+
+  span {
+    color: $secondaryColor;
+    font-size: 150px;
+    position: absolute;
+    top: -65px;
+    left: -150px;
+    text-align: right;
+    width: 150px;
+
+    @media #{$sm-device} {
+      position: static;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+}
+
+.creative-agency-heading h2 {
+  font-family: $baseFont;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 40px;
+
+  @media #{$xl-device} {
+    font-size: 48px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 20px;
+  }
+}
+
+.quote-title {
+  background-image: url('../img/icons/quote.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 50px 0 0 50px;
+  margin-bottom: 0;
+
+  @media #{$xs-device} {
+    padding: 30px 0 0 20px;
+  }
+
+  &.white{
+    background-image: url("../img/icons/quote-white.png");
+  }
+}
+
+.onepage-about-area {
+  @extend .sm-top;
+
+  @media #{$xl-device,$lg-device} {
+    margin-top: -70px;
+  }
+}

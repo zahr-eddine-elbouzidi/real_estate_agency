@@ -1,0 +1,94 @@
+/*====================================
+06. Start Icon Box Element Style
+=====================================*/
+
+.icon-box {
+  margin-top: 60px;
+
+  @media #{$md-device} {
+    margin-top: 40px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 25px;
+  }
+
+  &-icon {
+    color: $gray;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 30px;
+
+    @media #{$xs-device} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-info{
+    h4{
+      font-size: 18px;
+    }
+
+    .btn{
+      margin-top: 15px;
+
+      @media #{$sm-device} {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &--mini {
+    display: flex;
+
+    .icon-box {
+      &-icon {
+        font-size: 32px;
+        flex-basis: 35px;
+        max-width: 35px;
+        margin-bottom: 0;
+        margin-right: 27px;
+      }
+
+      &-info {
+        flex-basis: calc(100% - 62px);
+        max-width: calc(100% - 62px);
+
+        @media #{$xl-device} {
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+
+  &--boxed{
+    background-color: $white;
+    border: 1px solid $borderColor;
+    border-bottom: 5px solid $brandColor;
+    text-align: center;
+    padding: 70px 30px;
+    transition: 0.4s;
+
+    @media #{$sm-device} {
+      padding: 50px 15px;
+    }
+
+    .icon-box{
+      &-icon{
+        color: $brandColor;
+      }
+    }
+
+    &:hover{
+      transform: translateY(-10px);
+    }
+  }
+
+  &.light{
+    color: $white;
+
+    h4{
+      color: $white;
+    }
+  }
+}

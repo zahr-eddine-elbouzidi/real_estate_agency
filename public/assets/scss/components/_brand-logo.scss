@@ -1,0 +1,66 @@
+/*===============================
+18. Start Brand Logo Style
+================================*/
+
+.brand-logo-area {
+  &--2 {
+    padding: 60px 0;
+  }
+}
+
+.brand-logo-heading {
+  margin-bottom: 78px;
+
+  @media #{$md-device} {
+    margin-bottom: 45px;
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    font-weight: 500;
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+}
+
+.brand-logo-item {
+  display: table !important;
+  height: 100px;
+  opacity: 0.6;
+  transition: 0.4s;
+  text-align: center;
+
+  a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  img {
+    margin: auto;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.brand-logo-wrap {
+  margin-top: -100px;
+
+  @media #{$sm-device} {
+    margin-top: -40px;
+  }
+
+  .brand-logo-item {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media #{$sm-device} {
+      margin-top: 40px;
+    }
+  }
+}

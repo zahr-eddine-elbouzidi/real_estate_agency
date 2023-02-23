@@ -1,0 +1,103 @@
+
+
+        <?php echo $this->partial("partials/header.phtml", 
+                            ['categories' => $categories ,
+                            'subcats' => $subcats ,
+                            'contact' => $contact,
+                            'form' => $form,
+                            'candidatForm' => $candidatForm]); ?>
+ 
+    
+        <div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h2 class="page-title">Résultats de recherche</h2>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="<?= $this->url('home', ['action' => 'index']); ?>">Accueil</a></li>
+                            <li class="active">Résultats de recherche</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="entry-content">
+            <div class="container">
+
+            <h6>Résultats de recherche  </h6>
+            <div class="ot-heading mb-0">Mot clé : <span>// <?= $search; ?></span> </div>
+            <p>Environ <b><?= $searchSize; ?> résultats</b></p><hr><br>
+                <div class="row">
+                
+                    <div class="content-area col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+
+                   <?php if(isset($paginator)) : ?>
+                        <?php foreach($paginator as $blog_post): ?>
+                        <article class="post-box">
+                            <div class="post-inner">
+                                <div class="entry-media">
+                                    <div class="post-cat">
+                                        <span class="posted-in"><a href="#"><?= (isset($blog_post)) ? $blog_post['name_fr'] : null; ?></a> <a href="#"><?= (isset($blog_post)) ? $blog_post['sub_name_fr'] : null; ?></a></span>
+                                    </div>
+                                    <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><img src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($blog_post)) ? $blog_post['filename'] : null; ?>" alt=""></a>
+                                </div>
+                                <div class="inner-post">
+                                    <div class="entry-header">
+                                        <div class="entry-meta">
+                                            <span class="posted-on">_ <a href="#"><?= (isset($blog_post)) ? date('d-m-Y H:i', strtotime($blog_post['created_at']))  : null; ?></a></span>
+                                            <span class="byline">_ <a class="url fn n" href="#">Iew Admin</a></span>
+                                             
+                                        </div>
+                                        <h3 class="entry-title"><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><?= (isset($blog_post)) ? $blog_post['title'] : null; ?></a></h3>
+                                    </div>
+                                     
+                                    <div class="btn-readmore"><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><i class="flaticon-right-arrow-1"></i> Lire </a></div>
+                                </div>
+                            </div>
+                        </article>
+                        <?php endforeach; ?>
+                  <?php endif; ?>
+                     </div>  
+                     
+                     </div>
+                     </div>
+                     </div>
+
+<?php if($this->paginator): ?>
+<?= $this->paginationControl(
+    // The paginator object:
+    $this->paginator,
+    // The scrolling style:
+    'sliding',
+    // The partial to use to render the control:
+    'partials/paginator',
+    // The route to link to when a user clicks a control link:
+    ['route' => 'search','search' => $search]
+) ?>
+
+<?php endif; ?>
+
+        <div class="no-padding">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13242.645503545264!2d-6.9313777!3d33.9241138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x306d60524a06d703!2sInternational%20Education%20Window!5e0!3m2!1sen!2sma!4v1615080452007!5m2!1sen!2sma" height="350"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+       </div>
+ 
+        <?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+
+
+
+    </div>
+ 

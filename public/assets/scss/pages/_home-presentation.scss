@@ -1,0 +1,116 @@
+/*============================
+29. Start Presentation Page
+==============================*/
+.fullPage {
+  .section{
+    @media #{$sm-device} {
+      padding: 100px 0;
+    }
+
+    .contact-info-content{
+      @media #{$sm-device} {
+        padding: 0;
+
+        h6{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.feature-presentation-area {
+  .quote-title{
+    background-image: none;
+    padding: 0;
+    position: relative;
+    
+    &:before{
+      background-image: url("../img/icons/quote-white.png");
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: -50px;
+      width: 116px;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+
+    strong{
+      color: $white;
+    }
+  }
+}
+
+.header-presentation.is-sticky{
+  background-color: transparent;
+  box-shadow: none;
+  padding: 30px 0;
+}
+
+#fp-nav{
+  ul{
+    li{
+      width: 16px;
+      height: 16px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+
+      a{
+        border: 3px solid $white;
+        border-radius: 50%;
+        opacity: 0.2;
+
+        &.active, &:hover{
+          opacity: 1;
+        }
+
+        span{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.dark{
+    ul{
+      li{
+        a{
+          border-color: #222222;
+        }
+      }
+    }
+  }
+}
+
+.footer-presentation {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  left: 0;
+  bottom: 0;
+
+  @media #{$sm-device} {
+    position: static;
+  }
+
+  .footer-copyright-wrap{
+    padding: 0 0 50px;
+
+    @media #{$sm-device} {
+      padding: 30px 0;
+    }
+  }
+
+  &.light{
+    color: $white;
+
+    .footer-nav{
+      li{
+        a{
+          color: $white;
+        }
+      }
+    }
+  }
+}

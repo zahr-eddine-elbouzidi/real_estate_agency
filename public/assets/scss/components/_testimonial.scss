@@ -1,0 +1,138 @@
+/*=============================
+08. Start Testimonial Style
+==============================*/
+.testimonial-area {
+  color: $white;
+  position: relative;
+
+  .testimonial-content-wrap {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @media #{$md-device} {
+      height: 450px;
+    }
+
+    @media #{$sm-device} {
+      height: auto;
+      padding-bottom: 60px;
+    }
+  }
+
+  .testimonial-thumbnail-wrap {
+    position: absolute;
+    left: 66.666%;
+    height: 100%;
+    max-width: 754px;
+    margin-left: 20px;
+    top: 0;
+
+    @media #{$lg-device} {
+      left: 50%;
+    }
+
+    @media #{$md-device} {
+      display: none;
+    }
+
+    @media #{$sm-device} {
+      position: static;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      background-color: $white;
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 0;
+      height: 100%;
+      width: 20px;
+
+      @media #{$sm-device} {
+        display: none;
+      }
+    }
+  }
+
+  .testimonial-creative-agency-wrap{
+    @media #{$xl-device} {
+      padding: 70px 0;
+    }
+  }
+}
+
+.testimonial-item {
+  &-author {
+    margin-bottom: 32px;
+
+    @media #{$md-device} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$sm-device} {
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 20px;
+      color: $white;
+      margin-bottom: 0;
+    }
+
+    .tagline {
+      font-size: 16px;
+      opacity: 0.6;
+    }
+  }
+
+  &-quote {
+    font-size: 24px;
+
+    @media #{$sm-device} {
+      font-size: inherit;
+    }
+  }
+
+  &--black{
+    .testimonial-item{
+      &-author {
+        margin-bottom: 32px;
+
+        @media #{$md-device} {
+          margin-bottom: 20px;
+        }
+
+        @media #{$sm-device} {
+          margin-bottom: 15px;
+        }
+
+        .name {
+          font-size: 20px;
+          color: $brandColor;
+          margin-bottom: 0;
+        }
+
+        .tagline {
+          color: $paragraph;
+          font-size: 16px;
+          opacity: 0.6;
+        }
+      }
+
+      &-quote {
+        font-size: 24px;
+        color: $blackSoft;
+
+        @media #{$sm-device} {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}

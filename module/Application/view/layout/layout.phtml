@@ -1,0 +1,119 @@
+
+
+    <?= $this->content ?>    
+    
+        <!--<div class="container">
+            
+            <hr>
+            <footer>
+                <p>&copy; <? //echo date('Y') ?> <a href="https://getlaminas.org/">Laminas Project</a> a Series of LF Projects, LLC.</p>
+            </footer>
+        </div>-->
+
+ 
+
+
+         <!--=======================Javascript============================-->
+    <!-- build:js assets/js/app.min.js -->
+    <!--=== Modernizr Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/modernizr-3.6.0.min.js"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.min.js"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery-migrate.min.js"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/popper.min.js"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/bootstrap.min.js"></script>
+    <!--=== Isotope Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/isotope.pkgd.min.js"></script>
+    <!--=== Slick Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/slick.min.js"></script>
+    <!--=== Headroom Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.headroom.min.js"></script>
+    <!--=== Instafeed Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/instafeed.min.js"></script>
+    <!--=== Slicknav Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.slicknav.min.js"></script>
+    <!--=== Magnific Popup Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.magnific-popup.min.js"></script>
+    <!--=== jQuery Appear Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.appear.min.js"></script>
+    <!--=== Odometer Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/odometer.min.js"></script>
+    <!--=== EasyPieChart Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/easypiechart.min.js"></script>
+    <!--=== Leaflet Map Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/fullpage.min.js"></script>
+    <!--=== FullPage Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/leaflet.min.js"></script>
+    <!--=== MultiScroll Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/multiscroll.min.js"></script>
+    <!--=== Parallax [Jarallax] Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jarallax.min.js"></script>
+    <!--=== Nice Select Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/nice-select.min.js"></script>
+    <!--=== Countdown Min Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/jquery.countdown.min.js"></script>
+
+    <!--=== Active Js ===-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/active.js"></script>
+
+    <!-- endbuild -->
+  
+    <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+ 
+    <!--Floating WhatsApp javascript-->
+    <script src="<?= $this->basePath().'/assets/'; ?>js/whatsapp.js"></script>
+ 
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#inscriptionForm').modal('show');
+        });
+	</script>
+    <script>
+        window.jQuery = window.$ = jQuery;  
+        (function($) { "use strict";
+            //Preloader
+            Royal_Preloader.config({
+                mode           : 'logo',
+                logo           : '<?= $this->basePath(); ?>/img/IEW-LOGO-final.png',
+                logo_size      : [160, 65],
+                showProgress   : true,
+                showPercentage : true,
+                text_colour: '#000000',
+                background:  '#ffffff'
+            });
+        })(jQuery);
+    </script> 
+    <script>
+        $(function() {
+            $('#WAButton').floatingWhatsApp({
+                phone: '+212600030724', //WhatsApp Business phone number International format-
+                //Get it with Toky at https://toky.co/en/features/whatsapp.
+                headerTitle: 'Discutez avec nous sur WhatsApp!', //Popup Title
+                popupMessage: 'Bonjour, comment pouvons-nous vous aider?', //Popup Message
+                showPopup: true, //Enables popup display
+                buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+                //headerColor: 'crimson', //Custom header color
+                //backgroundColor: 'crimson', //Custom background button color
+                position: "left"    
+            });
+    });
+
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfJsqQeAAAAAGvTnf4Ncqk-uVgBojZuCPdnbjO8"></script>
+    <script>
+     
+      
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LfJsqQeAAAAAGvTnf4Ncqk-uVgBojZuCPdnbjO8', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+               document.getElementById('token').value = token;
+          });
+        });
+    
+  </script>
+    </body>
+</html>

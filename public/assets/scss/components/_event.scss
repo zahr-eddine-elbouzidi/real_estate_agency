@@ -1,0 +1,27 @@
+/*===============================
+34. Start Event Info Style
+================================*/
+.event-info{
+  display: flex;
+  align-items: center;
+
+  @media #{$sm-device} {
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+
+  &-icon{
+    font-size: 35px;
+    line-height: 1;
+    opacity: 0.6;
+    margin-right: 10px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+  }
+
+  &.light{
+    color: $white;
+  }
+}

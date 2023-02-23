@@ -1,0 +1,30 @@
+/*=========================
+32. Start Box Image Style
+==========================*/
+
+.box-image {
+  &__thumb {
+    margin-bottom: 28px;
+
+    img {
+      height: 235px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    h4 {
+      font-family: $baseFont;
+      font-size: 18px;
+
+      a{
+        color: $headingColor;
+
+        &:hover{
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}

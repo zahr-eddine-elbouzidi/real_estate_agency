@@ -1,0 +1,228 @@
+<?= $this->doctype() ?>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle("Cette page n'existe pas - International Education Window")->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/flaticon.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/owl.theme.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/style.css" />
+    <link rel="stylesheet" href="<?= $this->basePath().'/assets/' ?>css/royal-preload.css" />
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="<?= $this->basePath().'/assets/' ?>plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css"
+        href="<?= $this->basePath().'/assets/' ?>plugins/revolution/revolution/css/navigation.css">
+
+
+
+    <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/x-icon', 'href' => $this->basePath() . '/img/iew_logo_sup.png'])
+          //REVOLUTION NAVIGATION STYLE
+        ?>
+    <!-- Scripts -->
+ 
+    
+</head>
+
+<body class="royal_preloader">
+    <div id="page" class="site">
+        <header id="site-header" class="site-header header-style-2 header-fullwidth sticky-header header-static">
+            <!-- Main Header start -->
+            <div class="header-topbar">
+                <div class="octf-area-wrap">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="topbar-info">
+                                    <li><i class="fas fa-envelope"></i><a
+                                            href="mailto:contact@iew.ma">
+                                            contact@iew.ma
+                                        </a></li>
+                                    <li><a href="tel:+212537712133"><i
+                                                class="fas fa-phone-alt"></i>
+                                                +212 537 71 21 33
+                                        </a>
+                                        <a href="tel:+212600030724"> /
+                                                +212 600 03 07 24
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <div class="topbar-right">
+                                    <ul class="extra-text">
+                                        <li><a href="<?= $this->url('faq') ?>">FAQs</a></li>
+                                    </ul>
+                                    <ul class="extra-text">
+                                        <li><a href="<?= $this->url('contacts', ['action' => 'index']) ?>">Contactez-nous</a></li>
+                                    </ul>
+                                    <ul class="social-list">
+                                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"
+                                                target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"
+                                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="octf-main-header">
+                <div class="octf-area-wrap">
+                    <div class="container-fluid octf-mainbar-container">
+                        <div class="octf-mainbar">
+                            <div class="octf-mainbar-row octf-row">
+                                <div class="octf-col logo-col">
+                                    <div id="site-logo" class="site-logo">
+                                        <a href="<?= $this->url('home', ['action' => 'index']) ?>">
+                                            <img src="<?= $this->basePath(); ?>/img/IEW-LOGO-final.png" alt="Engitech"
+                                                class="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="octf-col menu-col">
+                                    <nav id="site-navigation" class="main-navigation">
+                                        <ul class="menu">
+
+                                            <li class="menu-item-has-children current-menu-item current-menu-ancestor">
+                                                <a href="#">Accueil</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="">Qui somme nous?</a></li>
+    
+                                                </ul>
+                                            </li>
+
+ 
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Blog</a>
+
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="<?= $this->url('contacts', ['action' => 'index']) ?>">Contacts</a>
+
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                             <a href="<?= $this->url('faq') ?>">FAQs</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="octf-col cta-col text-right">
+                                    <!-- Call To Action -->
+                                    <div class="octf-btn-cta">
+
+
+                                        <div class="octf-header-module">
+                                            <div class="toggle_search octf-cta-icons">
+                                                <i class="flaticon-search"></i>
+                                            </div>
+                                            <!-- Form Search on Header -->
+                                            <div class="h-search-form-field collapse">
+                                                <div class="h-search-form-inner">
+                                                    <form role="search" method="get" id="hsearch-form"
+                                                        class="search-form">
+                                                        <label><span class="screen-reader-text">Search for:</span>
+                                                            <input type="search" class="search-field"
+                                                                placeholder="Search …" value="" name="s"></label>
+                                                        <button type="submit" class="search-submit"><i
+                                                                class="flaticon-search"></i></button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="octf-header-module">
+                                            <div class="btn-cta-group btn-cta-header">
+                                                <a class="octf-btn octf-btn-third" href="contact.html">Free Quote</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_mobile">
+                <div class="container">
+                    <div class="mlogo_wrapper clearfix">
+                        <div class="mobile_logo">
+                            <a href="index.html">
+                                <img src="<?= $this->basePath(); ?>/img/IEW-LOGO-final.png" alt="Engitech">
+                            </a>
+                        </div>
+                        <div id="mmenu_toggle">
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="mmenu_wrapper">
+                        <div class="mobile_nav collapse">
+                            <ul id="menu-main-menu" class="mobile_mainmenu">
+                                <li class="menu-item-has-children current-menu-item current-menu-ancestor">
+                                    <a href="#">Accueil</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">Qui somme nous?</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item-has-children">
+                                    <a href="#">Blog</a>
+
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Contacts</a>
+
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="<?= $this->url('faq') ?>">FAQs</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+ 
+      <div class="row">
+        <div class="col-sm-6">
+
+        <div class="error-404 not-found text-center">
+                     <h1> Page introuvable</h1>
+                     
+                    <div class="content-404">
+                        <h4>Erreur 404</h4>
+                        <p>Oops! La page que vous recherchez semble introuvable. Sans détour, il n'est point de voyage... Retournez à la page d'accueil.</p>
+                         
+                        <a class="octf-btn" href="<?= $this->url('home', ['action' => 'index']) ?>">Retour à l'accueil</a>
+                    </div>
+                </div>
+ 
+        </div>
+
+        <div class="col-sm-6">
+            <img src="<?= $this->basePath(); ?>/img/404_.jpg">
+        </div>
+
+      </div>

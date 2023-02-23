@@ -1,0 +1,161 @@
+ 
+
+<?php echo $this->partial("partials/header.phtml", 
+                            ['categories' => $categories ,
+                            'subcats' => $subcats ,
+                            'contact' => $contact,
+                            'form' => $form,
+                            'candidatForm' => $candidatForm]); ?>
+
+
+
+<div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h1 class="page-title">FAQs</h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="<?= $this->url('home', ['action' => 'index']) ?>">Accueil</a></li>
+                            <li class="active">Questions les plus fréquentes</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            
+            <section class="faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="ot-heading">
+                                <span>// FAQ</span>
+                                <h2 class="main-heading">Lire <br>Les questions les plus fréquentes</h2>
+                            </div>
+                            <div class="space-25"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="ot-accordions">
+                                <div class="acc-item">
+                                    <span class="acc-toggle">Comment faire l'inscription ?
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                        <h5>Procédure d'inscription</h5>
+                                        <ol>
+                                            <li>Sélection de l’établissement</li>
+                                            <li>Constitution du dossier d’inscription</li>
+                                            <li>Lancement et traitement de la procédure d’inscription</li>
+                                            <li>Envoi sous délai du dossier</li>
+                                            <li>Élaboration des lettres de motivations et autres documents relatifs</li>
+                                            <li>Finalisation de l’inscription</li>
+                                            <li>Aide à l’obtention du logement universitaire ou individuel selon la destination, ainsi que l’assurance d’habitation si nécessaire</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="acc-item">
+                                    <span class="acc-toggle">Comment préparer mon dossier au visa. 
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                      <h5>Documents à joindre à la demande de visa</h5>
+                                      <ol>
+                                        <li>Formulaire complet de demande de visa avec votre signature.</li>
+                                        <li>Une photo en format passeport.</li>
+                                        <li>Un passeport en cours de validité.</li>
+                                        <li>Deux pages vierges de votre passeport.</li>
+                                        <li>Prouver que vous avez des fonds suffisants pour l’ensemble du séjour.</li>
+                                        <li>Preuve de souscription à une assurance maladie.</li>
+                                        <li>Récépissé de paiement pour le programme d’études demandé.</li>
+                                        <li>Une lettre d’acceptation de l’université de votre choix.</li>
+                                        <li>Justificatif de domicile.</li>
+                                      </ol>
+                                    </div>
+                                </div>
+                                <div class="acc-item">
+                                    <span class="acc-toggle">comment trouver un logement dans un pays étranger ?
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                        <h6>Nous prenons plusieurs facteurs en compte afin de vous proposer une alternative fiable :</h6>
+                                        <ul>
+                                            <li> Le loyer moyen d’une chambre étudiante</li>
+                                            <li> Le budget que vous souhaitez allouer à votre logement</li>
+                                            <li> Les démarches à effectuer et la réglementation à respecter (caution, préavis…)</li>
+                                            <li> Quels sont les quartiers recommandés pour les étudiants</li>
+                                            <li> Où se situe votre université par rapport à ces quartiers résidentiels</li>
+                                            <li> Les différents sites d’annonces pour trouver un logement</li>
+                                            <li> Les groupes dédiés aux colocations et annonces sur les réseaux sociaux de votre université</li>
+                                            <li> Les groupes similaires pour les autres établissements universitaires présents dans la ville</li>
+                                            <li> Les portails web des résidences étudiantes</li>
+                                      
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="ot-accordions">
+                                
+                                <div class="acc-item">
+                                    <span class="acc-toggle">Comment faire traduire mes documents ? 
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                        <p>Vous êtes tenus de fournir tous vos documents, constituant votre dossier de candidature, dans la langue d’origine du pays d’études à savoir en français, en anglais , en allemand , en espagnol….</p>
+                                        <p> <b>International Education Window</b> vous assiste dans cette démarche en vous orientant vers les traducteurs concernés.</p>
+                                    </div>
+                                </div>
+                             
+                               
+                                <div class="acc-item">
+                                    <span class="acc-toggle">Stage ? 
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                        <p>Que ce soit pour un stage à l’étranger ou pour une expérience de mission Volontariat International en Entreprise (VIE), <br><b>International Education Window</b> vous permet de trouver l’offre parfaite aux Etats-Unis, au Royaume-Uni et partout dans le monde. Consultez nos offres dans des domaines très variés : marketing, commerce international, management, tourisme, ressources humaines etc.</p>
+                                        <p>Un stage à l’étranger est l’occasion de confronter vos acquis avec la réalité du marché de l’emploi, d’enrichir votre CV et maximiser vos  chances de trouver un emploi à la fin de vos études.</p>
+                                        <p>N’oubliez pas que les recruteurs privilégient les chercheurs d’emploi ayant effectué un stage ou une mission à l’étranger !</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="acc-item">
+                                    <span class="acc-toggle">Coaching ?
+                                        <i class="down flaticon-download-arrow"></i><i class="up flaticon-up-arrow"></i>
+                                    </span>
+                                    <div class="acc-content">
+                                      <h6>"Accompagner les hommes à réaliser les objectifs implicites avec succès"</h6>
+                                      <h6>"INNOVONS en matière d’Énergie humaine dans Notre Organisation…"</h6>
+                                      <p>Nous avons l’expérience de l’entreprise, l’expérience de la formation managériale et de l’accompagnement psychologique .</p>
+                                      <p>Nos métiers et spécialités :</p>
+                                      <ul>
+                                        <li>Formations continues</li>
+                                        <li>Workshops en (coaching et gestion d’équipe, leadership, gestion de réunions, temps, conflits et des émotions….etc.)</li>
+                                        <li>Coaching individuel ou en groupe.</li>
+                                        <li>Démarches d’accompagnements Collectives (Cohésion, valeurs, Identités collectives, communication et organisations)</li>
+                                        <li>Diagnostic psychologique (climat social, prévention des risques psycho-sociaux, améliorer la qualité de vie et le bien être au travail).</li>
+                                      </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<div class="no-padding">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13242.645503545264!2d-6.9313777!3d33.9241138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x306d60524a06d703!2sInternational%20Education%20Window!5e0!3m2!1sen!2sma!4v1615080452007!5m2!1sen!2sma" height="350"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+       </div>
+ 
+        <?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+</div>
+ 

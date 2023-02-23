@@ -1,0 +1,32 @@
+<aside class="widget widget_recent_news">
+                            <h5 class="widget-title">Recent Blogs</h5>
+                            <ul class="recent-news clearfix">
+                                <?php if(isset($recentBlogs)) : ?>
+                                    <?php foreach($recentBlogs as $recentBlog) : ?>
+                                <li class="clearfix"> 
+                                    <div class="thumb">
+                                        <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $recentBlog['slug'],
+                                                                                'sub_category_name' => $recentBlog['sub_slug'],
+                                                                                'post_name' => $recentBlog['post_slug']]) ?>">
+                                        <img   width = 70 height =70 src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($recentBlog)) ? $recentBlog['filename'] : null; ?>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="entry-header">
+                                        <h6><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $recentBlog['slug'],
+                                                                                'sub_category_name' => $recentBlog['sub_slug'],
+                                                                                'post_name' => $recentBlog['post_slug']]) ?>">
+                                        <?= (isset($recentBlog)) ? $recentBlog['title'] : null; ?></a></h6>
+                                        <span class="post-on">
+                                                <span class="entry-date">
+                                                   
+                                                    <?= (isset($recentBlog)) ? date('d-m-Y H:i', strtotime($recentBlog['created_at']))  : null; ?>
+                                                </span>
+                                        </span>
+                                    </div>
+                                </li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?> 
+                            </ul>
+</aside>

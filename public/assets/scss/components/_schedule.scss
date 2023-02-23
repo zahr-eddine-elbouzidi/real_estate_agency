@@ -1,0 +1,109 @@
+/*==================================
+16. Start Event Schedule Style
+===================================*/
+.schedule-area-heading {
+  @media #{$sm-device}{
+    margin-bottom: 18px;
+  }
+
+  h3 {
+    font-family: $baseFont;
+    font-weight: 500;
+    margin-top: -8px;
+    margin-bottom: 28px;
+
+    @media #{$sm-device} {
+      margin-bottom: 18px;
+    }
+  }
+
+  .btn-border-bottom {
+    color: $paragraph;
+    font-family: $baseFont;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 15px;
+
+    &:hover {
+      color: $brandColor;
+    }
+  }
+}
+
+.schedules-nav {
+  border-bottom: 2px solid $borderColor;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $blackSoft;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 500;
+      position: relative;
+
+      &.active {
+        &:before {
+          background-color: $brandColor;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          height: 2px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.schedules-content {
+  overflow: hidden;
+
+  .tab-pane {
+    &.show {
+      h4, h6 {
+        animation: slideInLeft 0.4s forwards;
+      }
+    }
+  }
+
+  &-item {
+    h4 {
+      color: $brandColor;
+      margin-bottom: 53px;
+
+      @media #{$sm-device} {
+        margin-bottom: 33px;
+      }
+    }
+  }
+}
+
+.schedules-timetable {
+  &-item {
+    font-size: 15px;
+    margin-bottom: 40px;
+
+    @media #{$sm-device} {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  }
+}

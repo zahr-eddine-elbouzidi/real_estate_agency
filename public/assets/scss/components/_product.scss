@@ -1,0 +1,132 @@
+/*=============================
+25. Start Product Style
+=============================*/
+
+.product-item {
+  margin-top: 50px;
+
+  @media #{$sm-device} {
+    margin-top: 30px;
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transition: 0.4s;
+    }
+
+    .badge {
+      border-radius: 0;
+      font-weight: 600;
+      font-family: $headingFont;
+      padding: 6px 10px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__info {
+    margin-top: 30px;
+    text-align: center;
+
+    .title {
+      font-size: 18px;
+
+      a {
+        color: $headingColor;
+
+        &:hover {
+          color: $brandColor;
+        }
+      }
+    }
+
+    .price {
+      font-family: $headingFont;
+      font-weight: 500;
+
+      &-sale {
+        color: $red;
+
+        &:after {
+          color: $paragraph;
+          content: '-';
+          padding: 0 5px 0 10px;
+          font-size: 20px;
+          line-height: 1;
+        }
+      }
+    }
+
+    .btn-bordered {
+      margin-top: 13px;
+      font-size: 16px;
+      padding-left: 29px;
+      padding-right: 29px;
+
+      &:hover {
+        background-color: $brandColor;
+        border-color: $brandColor;
+        color: $white;
+      }
+    }
+  }
+
+  &:hover {
+    .product-item__thumb {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &--2 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+
+    .product-item {
+      &__info {
+        background-color: $white;
+        margin-top: 0;
+        padding: 50px 15px;
+        transform: translateY(100%);
+        transition: 0.3s;
+        @include hide;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    &:hover{
+      .product-item__info{
+        transform: none;
+        @include show;
+      }
+    }
+  }
+}
+
+.product-carousel {
+  .product-item {
+    margin-top: 0;
+  }
+
+  .slick {
+    &-list {
+      margin: 0 -15px;
+    }
+
+    &-slide {
+      padding: 0 15px;
+    }
+  }
+}

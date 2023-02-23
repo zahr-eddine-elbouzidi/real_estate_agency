@@ -1,0 +1,173 @@
+/*======================================
+42. Portfolio Details Page Style CSS
+=======================================*/
+.portfolio-details-page-content {
+  margin-top: 100px;
+
+  @media #{$md-device} {
+    margin-top: 58px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 40px;
+  }
+}
+
+.portfolio-details {
+  &-info {
+    font-size: 15px;
+    line-height: 2;
+
+    @media #{$sm-device} {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 32px;
+      font-family: $baseFont;
+      margin-top: -7px;
+      margin-bottom: 24px;
+
+      @media #{$sm-device} {
+        margin-bottom: 14px;
+        font-size: 24px;
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      @media #{$sm-device} {
+        margin-top: 15px;
+      }
+
+      &:hover {
+        background-color: $brandColor;
+        border-color: $brandColor;
+        color: $white;
+      }
+    }
+  }
+
+  &-meta {
+    border-bottom: 1px solid $borderColor;
+    padding-bottom: 35px;
+
+    .portfolio-meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -30px;
+
+      li {
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-top: 30px;
+
+        label {
+          color: $headingColor;
+          display: block;
+          font-family: $headingFont;
+          font-weight: 500;
+          line-height: 1;
+        }
+
+        a {
+          color: $paragraph;
+
+          &:hover {
+            color: $brandColor;
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    .social-icons {
+      a {
+        color: $paragraph;
+        font-size: 16px;
+        line-height: 1;
+
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+
+    .portfolio-like-view {
+      span {
+        margin-right: 10px;
+        display: inline-block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      i {
+        margin-right: 5px;
+        color: $headingColor;
+
+        &.fa-heart-o {
+          font-size: 16px;
+          color: $headingColor;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-details-thumb {
+
+  img{
+    width: 100%;
+  }
+
+  &--gallery {
+    margin-top: -30px;
+
+    [class^="col"] {
+      margin-top: 30px;
+    }
+  }
+
+  &--slider{
+    .slick-dots{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+
+      @media #{$sm-device, $md-device} {
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+// Start Portfolio Details Pagination
+.port-pagination-content {
+  padding: 55px 0;
+
+  a {
+    line-height: 1;
+    font-size: 15px;
+    color: $black;
+    font-weight: 500;
+
+    i {
+      font-size: 25px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: $brandColor;
+    }
+  }
+}
+

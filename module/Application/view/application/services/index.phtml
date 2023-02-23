@@ -1,0 +1,306 @@
+<?php echo $this->partial("partials/header.phtml", 
+                            ['categories' => $categories ,
+                            'subcats' => $subcats ,
+                            'contact' => $contact,
+                            'form' => $form,
+                            'candidatForm' => $candidatForm,
+                            'devweb' => $devweb,
+                            'devmob' => $devmob,
+                            'uiux' => $uiux,
+                            'ai' => $ai,
+                            'seo' => $seo,
+                            'de' => $de
+                            ]); ?>
+
+
+
+
+
+<!--== Start Service Page Content Wrapper ==-->
+<div class="service-flip-board-area sm-bottom mt-90 mt-md-40 mt-sm-30">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-top">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($devweb[8]) ? $devweb[8] : 'Développement web'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($devweb[2]) ? $devweb[2] : 'Développement web'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-accelerator"></i>
+                                            </div>
+                                            <h4><?= isset($devweb[2]) ? $devweb[2] : 'Développement web'; ?></h4>
+                                            <p><?= isset($devweb[3]) ? $devweb[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-left">
+                             <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($devmob[8]) ? $devmob[8] : 'Développement mobile'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($devmob[2]) ? $devmob[2] : 'Développement web'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-accelerator"></i>
+                                            </div>
+                                            <h4><?= isset($devmob[2]) ? $devmob[2] : 'Développement mobile'; ?></h4>
+                                            <p><?= isset($devmob[3]) ? $devmob[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-right">
+                             <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($uiux[8]) ? $uiux[8] : 'Web Design UI/UX'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($uiux[2]) ? $uiux[2] : 'Web Design UI/UX'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-accelerator"></i>
+                                            </div>
+                                            <h4><?= isset($uiux[2]) ? $uiux[2] : 'Web Design UI/UX'; ?></h4>
+                                            <p><?= isset($uiux[3]) ? $uiux[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-bottom">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($ai[8]) ? $ai[8] : 'AI'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($ai[2]) ? $ai[2] : 'Intélligence Artificielle'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-cloud"></i>
+                                            </div>
+                                            <h4><?= isset($ai[2]) ? $ai[2] : 'Intélligence Artificielle'; ?></h4>
+                                            <p><?= isset($ai[3]) ? $ai[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-bottom">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($seo[8]) ? $seo[8] : 'SEO'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($seo[2]) ? $seo[2] : 'SEO - Référencement Naturel'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-cloud"></i>
+                                            </div>
+                                            <h4><?= isset($seo[2]) ? $seo[2] : 'SEO - Référencement Naturel'; ?></h4>
+                                            <p><?= isset($seo[3]) ? $seo[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="flip-box to-bottom">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div class="flip-thumb bg-img" data-bg="<?= $this->basePath().'/uploadsFiles/' ?>posts/<?= isset($de[8]) ? $de[8] : 'Ingénierie de données'; ?>">
+                                            <div class="flip-thumb-txt">
+                                                <h4><?= isset($de[2]) ? $de[2] : 'Ingénierie de données'; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back bg-brand">
+                                        <div class="flip-content">
+                                            <div class="icon">
+                                                <i class="icon-basic-cloud"></i>
+                                            </div>
+                                            <h4><?= isset($de[2]) ? $de[2] : 'Ingénierie de données'; ?></h4>
+                                            <p><?= isset($de[3]) ? $de[3] : 'No content'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+ <!--== Start Contact Split Area ==-->
+     <!--<div id="multiscroll" class="service-split-wrapper">
+            <div class="ms-left">
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-pencil-ruler"></i>
+                            </div>
+                            
+                         </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-pencil-ruler"></i>
+                            </div>
+                            <h3>Développement Mobile</h3>
+                            <p>Une application mobile vous permettra de renforcer votre présence digitale, de vous distinguer de vos concurrents et d’être plus proche de vos clients.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-pencil-ruler"></i>
+                            </div>
+                            <h3>UI/UX design</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-signs"></i>
+                            </div>
+                            <h3>Analyase de données</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-clubs"></i>
+                            </div>
+                            <h3>Apprentissage automatique</h3>
+                            <p>Conception et l'implémentation des solutions innovantes a l'aide de l'apprentissage automatique (Machine Learning).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-clubs"></i>
+                            </div>
+                            <h3>Intélligence artificielle</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-content">
+                        <div class="service-split-info">
+                            <div class="icon">
+                                <i class="icon-basic-clubs"></i>
+                            </div>
+                            <h3>SEO Référencement naturel</h3>
+                            <p>Le référencement SEO naturel offre une présence de recherche visible et efficace conduisant à une augmentation considérable des ventes, la rentabilité et l'efficacité des coûts pour nos clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-right">
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/01.jpg"></div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/02.jpg"></div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/03.jpg"></div>
+                </div>
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/01.jpg"></div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/02.jpg"></div>
+                </div>
+
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/03.jpg"></div>
+                </div>
+                <div class="ms-section">
+                    <div class="service-split-img bg-img" data-bg="assets/img/service/split/03.jpg"></div>
+                </div>
+            </div>
+        </div>
+    == End Contact Split Area ==-->
+
+<?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+ 

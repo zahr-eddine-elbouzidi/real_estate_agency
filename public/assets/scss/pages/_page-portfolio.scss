@@ -1,0 +1,94 @@
+/*===============================
+41. Start Portfolio Page Style
+================================*/
+
+/*
+  Portfolio Filter Menu Style
+*/
+
+.filter-menu{
+  display: flex;
+  flex-wrap: wrap;
+
+  li{
+    color: $blackSoft;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$xs-device} {
+      margin-bottom: 5px;
+    }
+
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+
+    &:before{
+      background-color: $brandColor;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      transform: translateX(-50%);
+      transition: all .5s;
+    }
+
+    &.active{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*
+  Pagination
+*/
+
+.pagination{
+  li{
+
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+
+    a{
+      border: 1px solid $borderColor;
+      line-height: 40px;
+      text-align: center;
+      color: $blackSoft;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      height: 40px;
+      width: 40px;
+
+      &:hover,&.active{
+        border-color: $brandColor;
+        color: $brandColor;
+      }
+
+      i{
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*
+  Portfolio Item
+*/
+
+.row{
+  &.no-gutters{
+    .portfolio-item{
+      &:not(.portfolio-item--3){
+        margin-top: 0;
+      }
+    }
+  }
+}

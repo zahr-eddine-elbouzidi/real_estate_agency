@@ -1,0 +1,106 @@
+/*===============================
+48. Coming Soon Page CSS
+================================*/
+
+.coming-soon-page-wrapper {
+  min-height: 100vh;
+  @include center;
+
+  @media #{$sm-device} {
+    padding: 100px 0;
+  }
+}
+
+.coming-soon-content {
+  .logo {
+    margin-bottom: 100px;
+
+    @media #{$sm-device} {
+      margin-bottom: 50px;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    color: $brandColor;
+  }
+
+  .newsletter-form-wrap {
+    margin-top: 190px;
+
+    @media #{$lg-device} {
+      margin-top: 120px;
+    }
+
+    @media #{$md-device} {
+      margin-top: 80px;
+    }
+
+    @media #{$sm-device} {
+      margin-top: 50px;
+    }
+
+    .input-item {
+      input {
+        text-align: center;
+        border-bottom-color: $brandColor;
+        color: $blackSoft;
+
+        &:focus {
+          border-bottom-color: $blackSoft;
+        }
+      }
+    }
+  }
+
+  // Maintenance Mode
+  &.maintenance-mode {
+    color: $white;
+
+    .progress-info {
+      &__title, &__percent {
+        color: $white;
+      }
+    }
+
+    .maintenance-progress-wrap {
+      @media #{$lg-device,$xl-device} {
+        margin-top: 50px;
+      }
+    }
+
+    .social-icons {
+      margin-top: 50px;
+
+      @media #{$sm-device} {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  // 404 Error Page Mode
+  &.error-page-mode{
+    .warning-icon{
+      border-bottom: 1px solid $borderColor;
+      padding-bottom: 60px;
+      margin-bottom: 50px;
+
+      @media #{$sm-device} {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    h3{
+      margin-bottom: 35px;
+    }
+
+    .btns-group{
+      margin-top: 60px;
+
+      @media #{$sm-device} {
+        margin-top: 40px;
+      }
+    }
+  }
+}

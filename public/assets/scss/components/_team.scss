@@ -1,0 +1,203 @@
+/*============================
+15. Start Team Member Style
+==============================*/
+.team-member {
+  position: relative;
+
+  &__content {
+    background: linear-gradient(to top, #000, transparent);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    @include hide;
+  }
+
+  &__thumb{
+    img{
+      width: 100%;
+    }
+  }
+
+  .member {
+    &-info, &-icons {
+      position: absolute;
+      left: 50%;
+      width: 100%;
+    }
+
+    &-info {
+      bottom: 40px;
+      transform: translateX(-50%);
+      line-height: 1;
+
+      h4 {
+        font-size: 18px;
+        color: $brandColor;
+      }
+    }
+
+    &-icons {
+      left: auto;
+      top: 30px;
+      right: 30px;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      a {
+        color: $white;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 15px;
+
+        &:hover {
+          color: $brandColor;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .team-member__content {
+      @include show;
+    }
+  }
+
+  &.team-area-heading {
+    color: $white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    @media #{$xs-device} {
+      height: 380px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: $white;
+      font-family: $baseFont;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+
+    .btn-border-bottom {
+      color: $white;
+      border-bottom-color: rgba($white, 0.2);
+      font-family: $baseFont;
+      font-size: 17px;
+      font-weight: 400;
+
+      &:hover {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  // Team Member Style 2
+  &--2 {
+    margin-top: 35px;
+
+    .team-member {
+      &__content {
+        background: transparent;
+        @include show;
+        position: static;
+
+        .member-info {
+          position: static;
+          transform: none;
+          margin-top: 35px;
+        }
+      }
+
+      &__thumb {
+        position: relative;
+
+        &:before {
+          background: linear-gradient(to top, #000, transparent);
+          content: '';
+          text-align: center;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          @include hide;
+        }
+
+        .member-icons {
+          flex-direction: row;
+          top: auto;
+          bottom: 0;
+          right: auto;
+          justify-content: center;
+          @include hide;
+
+          a:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .team-member__thumb {
+        &:before {
+          @include show;
+        }
+
+        .member-icons {
+          bottom: 30px;
+          @include show;
+        }
+      }
+    }
+  }
+}
+
+/*
+  About Page Team Style
+*/
+.about-team-content {
+  height: 650px;
+  @include center;
+
+  @media #{$sm-device} {
+    height: 300px;
+  }
+
+
+  h2 {
+    @extend .color-brand;
+    line-height: 1;
+    margin-bottom: 0;
+
+    @media #{$md-device, $lg-device,$xl-device} {
+      font-size: 100px;
+    }
+  }
+}
+
+/*
+  Team Page Team Member Style
+*/
+
+.team-page-content-inner{
+  margin: -30px 30px 30px;
+  .team-member{
+    margin-top: 30px;
+  }
+}

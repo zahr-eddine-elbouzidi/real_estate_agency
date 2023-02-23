@@ -1,0 +1,37 @@
+/*=====================================
+33. Start Home Portfolio Parallax
+=====================================*/
+.portfolio-parallax-content{
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+
+  h5{
+    font-family: $baseFont;
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+
+  h2{
+    font-size: 52px;
+    font-weight: 500;
+    margin-bottom: 40px;
+
+    @media #{$sm-device} {
+      font-size: 30px;
+    }
+  }
+
+  a{
+    color: $white;
+
+    &.btn-bordered{
+      border-color: $white;
+
+      &:hover{
+        background-color: $white;
+        color: $brandColor;
+      }
+    }
+  }
+}

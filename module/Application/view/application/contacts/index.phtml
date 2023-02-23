@@ -1,0 +1,311 @@
+
+
+<?= $this->doctype() ?>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle('ITISDE - IT Innovative Skills & Data Enginnering')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+    <meta http-equiv="refresh" content="300">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+
+
+<!-- build:css assets/css/app.min.css -->
+    <!--== Nice Select Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/nice-select.min.css" rel="stylesheet" />
+    <!--== Leaflet Map Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/leaflet.min.css" rel="stylesheet" />
+    <!--== MultiScroll Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/multiscroll.min.css" rel="stylesheet" />
+    <!--== FullPage Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/fullpage.min.css" rel="stylesheet" />
+    <!--== Odometer Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/odometer.min.css" rel="stylesheet" />
+    <!--== Magnific Popup Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== Slicknav Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/slicknav.min.css" rel="stylesheet" />
+    <!--== Headroom Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/headroom.min.css" rel="stylesheet" />
+    <!--== Slick Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/slick.min.css" rel="stylesheet" />
+    <!--== Linea Icon Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/linea.min.css" rel="stylesheet" />
+    <!--== Animate Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/animate.min.css" rel="stylesheet" />
+    <!--== Font-Awesome Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Bootstrap Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Spacing Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/helper.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/style.min.css" rel="stylesheet" />
+    <!-- endbuild -->
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!--Floating WhatsApp css-->
+<link rel="stylesheet" type="text/css"
+        href="<?= $this->basePath().'/assets/' ?>css/whatsapp.css">
+
+    <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/x-icon', 'href' => $this->basePath() . '/assets/img/itisde_logo_head.png'])
+          //REVOLUTION NAVIGATION STYLE
+        ?>
+    <!-- Scripts -->
+ 
+     
+</head>
+
+
+<body class="preloader-active">
+
+
+    <!--== Start OffCanvas Popup Menu Area ==-->
+    <div class="offCanvas-wrapper popup-menu top-to-bottom">
+        <div class="offCanvas-inner">
+            <div class="offCanvas-content-wrap">
+                <nav class="menu-wrap">
+
+
+                <ul class="main-nav vertical">
+                <?php foreach($categories as $category): ?>
+
+                <?php if(sizeof($subcats) !== 0): ?>
+                <li class="has-submenu">
+                    
+                    <a href="#"><?= $category['name_fr']; ?></a>
+                
+                    
+                    <ul class="sub-nav">
+                        <?php foreach($subcats as $menu): ?>
+                            <?php if($menu["sub_category_id"] === $category["id"]): ?>
+                                <li>
+                                <?php if($menu["sub_name_fr"] === 'Contactez-nous'): ?>
+                                                    <a href="<?= $this->url('contacts', ['action' => 'index']) ?>" >Contactez-nous</a>
+                                                <?php  else: ?>
+                                                    <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $menu['slug'],
+                                                                                'sub_category_name' => $menu['sub_slug'],
+                                                                                'post_name' => $menu['sub_slug']]) ?>"><?= $menu["sub_name_fr"] ?></a>
+                                                <?php endif; ?>
+                                
+                                    
+                                </li>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
+                </li>
+                <?php endforeach; ?>
+
+
+
+                     
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <button class="btn-close"><i class="icon-arrows-remove"></i></button>
+    </div>
+    <!--== End OffCanvas Popup Menu Area ==-->
+
+
+        <!--== Start Preloader Content ==-->
+        <div class="preloader-wrap">
+        <div class="preloader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!--== End Preloader Content ==-->
+
+
+
+ <!--== Start Header Area Wrapper ==-->
+ <header class="header ">
+        <div class="container-fluid">
+            <div class="row align-items-center position-relative">
+                <div class="col-4 col-lg-3">
+                    <!-- Start Logo Area -->
+                    <div class="logo-area-wrap">
+                        <a href="<?= $this->url('home', ['action' => 'index']) ?>" class="logo"><img style="width:220px;" src="<?= $this->basePath().'/assets/' ?>img/itisde_logo.png" alt="IT Innovative Skills & Data Engineering" /></a>
+                        <a href="<?= $this->url('home', ['action' => 'index']) ?>" class="logo-light"><img style="width:220px;" src="<?= $this->basePath().'/assets/' ?>img/itisde_logo.png" alt="IT Innovative Skills & Data Engineering" /></a>
+                    </div>
+                    <!-- End Logo Area -->
+                </div>
+
+                <div class="col-lg-7 d-none d-lg-block full-mega-menu">
+                    <!-- Start Main Navigation Content -->
+                    <div class="main-navigation">
+                        <nav class="menu-wrap">
+                            <ul class="main-nav nav">
+
+                            
+                    
+                            <?php foreach($categories as $category): ?>
+
+                                <?php if(sizeof($subcats) !== 0): ?>
+                                <li class="has-submenu">
+                                       
+                                    <a href="#"><?= $category['name_fr']; ?></a>
+                                   
+                                    
+                                    <ul class="sub-nav">
+                                        <?php foreach($subcats as $menu): ?>
+                                            <?php if($menu["sub_category_id"] === $category["id"]): ?>
+                                                <li>  
+                                                    <?php if($menu["sub_name_fr"] === 'Contactez-nous'): ?>
+                                                    <a href="<?= $this->url('contacts', ['action' => 'index']) ?>" >Contactez-nous</a>
+                                                <?php  else: ?>
+                                                    <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $menu['slug'],
+                                                                                'sub_category_name' => $menu['sub_slug'],
+                                                                                'post_name' => $menu['sub_slug']]) ?>"><?= $menu["sub_name_fr"] ?></a>
+                                                <?php endif; ?></li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                     
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- End Main Navigation Content -->
+                </div>
+
+                <div class="col-8 col-lg-2">
+                    <!-- Start Header Right Content -->
+                    <div class="header-right-content text-right">
+                      
+                        <button class="btn-src btn-open" data-src="search-box-wrapper"><i class="fa fa-search"></i></button>
+                        <button class="btn-menu btn-open d-none d-lg-inline-block mr-lg-0" data-src="popup-menu"><i
+                            class="fa fa-bars"></i></button>
+                        <button class="btn-menu btn-open d-lg-none" data-src="responsive-menu"><i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <!-- End Header Right Content -->
+                </div>
+            </div>
+        </div>
+    </header>
+ <!--== Start Contact Split Area ==-->
+ <div class="contact-split-wrapper">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+
+
+                    <!--== Start Map Content Wrapper ==-->
+                    <div class="contact-map-split map">
+                   
+                        <iframe width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13242.645503545264!2d-6.9313777!3d33.9241138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x306d60524a06d703!2sInternational%20Education%20Window!5e0!3m2!1sen!2sma!4v1615080452007!5m2!1sen!2sma"   style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                        
+                    </div>
+                    <!--== End Map Content Wrapper ==-->
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-split-content bg-black sp-y">
+                        <div class="contact-info-content contact-info-content-conference d-block p-0">
+                            <div class="contact-info-item">
+                                <h4>Agence</h4>
+                                <?php echo $contact['address']; ?> <br> 
+                                 
+                            </div>
+
+                            <div class="contact-info-item">
+                                <h4>Contact information</h4>
+                                <h6><?php echo $contact['email']; ?><br> <?php echo $contact['tel']; ?></h6>
+                                <div class="social-icons light">
+                                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <h4>Contactez-nous</h4>
+
+                                <div class="row">
+                                    <div class="col-xl-8">
+                                        <div class="contact-form-wrap">
+                                            <form id="contact-form" action="#">
+                                                <div class="form-content">
+                                                    <div class="row mtn-sm-30">
+                                                        <div class="col-md-6">
+                                                            <div class="input-item light">
+                                                                <label for="name" class="sr-only">Nom</label>
+                                                                <input id="name" name="name" type="text" placeholder="Nom complet" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="input-item light">
+                                                                <label for="phone" class="sr-only">Téléphone</label>
+                                                                <input id="phone" name="phone" type="text" placeholder="N° Téléphone" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <div class="input-item light">
+                                                                <label for="email" class="sr-only">Email</label>
+                                                                <input id="email" name="email" type="text" placeholder="Adresse Email" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <div class="input-item light">
+                                                                <label for="message" class="sr-only">Message</label>
+                                                                <textarea id="message" name="message" type="text" placeholder="Message"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <div class="input-item light">
+                                                                <button class="btn btn-brand">Envoyer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- Form Notification -->
+                                            <div class="form-notification"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== End Contact Split Area ==-->
+
+<?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+ 

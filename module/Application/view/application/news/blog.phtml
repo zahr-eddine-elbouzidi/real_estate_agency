@@ -1,0 +1,27 @@
+<?= $this->headTitle('Blog - IEW - International Education Window')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+
+
+ 
+ 
+<?php echo $this->partial("partials/header.phtml", 
+                            ['categories' => $categories ,
+                            'subcats' => $subcats ,
+                            'contact' => $contact,
+                            'form' => $form,
+                            'candidatForm' => $candidatForm]); ?>
+
+
+
+
+
+<?php echo $this->partial("partials/blog/list.phtml" , ['blogArticles' => $blogArticles , 'categoriesByPostCounts' => $categoriesByPostCounts , 'recentBlogs' => $recentBlogs]); ?>
+
+
+<?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+
+
+ 
+</div>

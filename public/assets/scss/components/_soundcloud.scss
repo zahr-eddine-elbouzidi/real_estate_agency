@@ -1,0 +1,88 @@
+/*=========================
+35. Start Soundcloud Style
+=========================*/
+.soundcloud-heading {
+
+  @media #{$md-device} {
+    margin-bottom: 60px;
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-size: 36px;
+    color: $white;
+    font-weight: 500;
+    margin: 25px 0 40px;
+
+    @media #{$md-device} {
+      margin: 15px 0 25px;
+    }
+
+    @media #{$sm-device} {
+      margin: 15px 0;
+    }
+  }
+
+  .btn-border-bottom {
+    color: $white;
+  }
+}
+
+.soundcloud-item {
+  background-color: $white;
+  border-radius: 3px;
+  padding: 10px;
+  height: 170px;
+  margin-top: 40px;
+
+  iframe {
+    border-radius: 3px;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*
+  Gallery Style CSS
+*/
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+
+  &:hover{
+    &:before,.btn-gallery{
+      @include show;
+    }
+    img{
+      transform: scale(1);
+    }
+  }
+
+  &:before{
+    @include overlay($black,0.6);
+    z-index: 1;
+    @include hide;
+  }
+
+  .btn-gallery {
+    position: absolute;
+    color: $white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include hide;
+    z-index: 2;
+  }
+
+  img{
+    transform: scale(1.1);
+    transition: 0.4s;
+    width: 100%;
+  }
+}

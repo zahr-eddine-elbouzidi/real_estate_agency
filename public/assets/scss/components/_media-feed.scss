@@ -1,0 +1,93 @@
+/*===============================
+50. Start Media Feed Style CSS
+================================*/
+
+.instagram-gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  .instagram-item {
+    position: relative;
+
+    &:before {
+      pointer-events: none;
+      @include overlay(black, 0.5);
+      @include hide;
+    }
+
+    .instagram-hvr-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 15px;
+      pointer-events: none;
+      @include hide;
+
+      span {
+        display: block;
+
+        i {
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &:hover {
+      &:before, .instagram-hvr-content {
+        @include show;
+      }
+    }
+  }
+
+  &--1 {
+    .instagram-item {
+      width: calc(100% / 6);
+
+      @media #{$md-device} {
+        width: calc(100% / 3);
+      }
+
+      @media #{$sm-device} {
+        width: calc(100% / 2);
+      }
+    }
+  }
+
+  &--2 {
+    margin: -30px -15px 0;
+
+    .instagram-item {
+      padding: 0 15px;
+      width: calc(100% / 3);
+      margin-top: 30px;
+
+      @media #{$sm-device} {
+        width: calc(100% / 2);
+      }
+
+      &:before {
+        width: calc(100% - 30px);
+        left: 15px;
+      }
+    }
+  }
+}
+
+.media-feed-header {
+  margin-bottom: 50px;
+
+  @media #{$sm-device} {
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: $paragraph;
+
+    &:hover {
+      color: $brandColor;
+    }
+  }
+}

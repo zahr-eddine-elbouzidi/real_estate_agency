@@ -1,0 +1,72 @@
+/*==========================================
+Start Tracking Order Page Wrapper
+===========================================*/
+.feature-heading {
+  margin-bottom: 80px;
+
+  @media #{$sm-device} {
+    margin-bottom: 38px;
+  }
+
+  @media #{$md-device} {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-family: $baseFont;
+    font-weight: 500;
+
+    @media #{$xl-device} {
+      font-size: 48px;
+    }
+
+    span {
+      color: $brandColor;
+    }
+  }
+
+  &--2 {
+    background-size: inherit;
+    padding: 40px 0;
+    margin: -45px 0 45px;
+
+    @media #{$sm-device, $md-device} {
+      background-size: contain;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: $fontPD;
+      font-weight: 700;
+      @media #{$lg-device,$xl-device} {
+        font-size: 70px;
+        line-height: 1.4;
+        margin-top: -22px;
+      }
+
+      @media #{$sm-device} {
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.product-feature-thumb {
+  margin: -150px -200px 0 0;
+
+  @media #{$lg-device,$md-device} {
+    margin: auto;
+  }
+
+  @media #{$sm-device} {
+    margin: 0 0 30px 0;
+  }
+}
+
+.feature-area-side-menu{
+  .list-box{
+    @media #{$xl-device,$lg-device} {
+      margin-top: 75px;
+    }
+  }
+}

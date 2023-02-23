@@ -1,0 +1,62 @@
+/*============================
+22. Start Accordion Style
+==============================*/
+
+.accordion {
+  .card {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-header {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      margin-bottom: 0 !important;
+      padding: 0;
+
+
+      h4 {
+        border-bottom: 2px solid $borderColor;
+        font-family: $baseFont;
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 15px;
+        transition: 0.4s;
+
+        &:hover, &[aria-expanded="true"] {
+          border-bottom-color: $brandColor;
+        }
+      }
+    }
+
+    &-body {
+      padding: 25px 0 0;
+    }
+  }
+
+  &--2{
+    .card {
+      &-header {
+        h4 {
+          border: 2px solid $borderColor;
+          border-radius: 100px;
+          padding: 15px 20px;
+
+          &:hover, &[aria-expanded="true"] {
+            border-color: $brandColor;
+          }
+        }
+      }
+
+      &-body{
+        padding: 25px;
+      }
+    }
+  }
+}

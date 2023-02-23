@@ -1,0 +1,166 @@
+<div class="page-header flex-middle">
+                <div class="container">
+                    <div class="inner flex-middle">
+                        <h2 class="page-title">Blog</h2>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="<?= $this->url('home', ['action' => 'index']); ?>">Accueil</a></li>
+                            <li class="active">Blog</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="entry-content">
+            <div class="container">
+                <div class="row">
+                    <div class="content-area col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+
+                    <?php if(isset($blogArticles)) : ?>
+                        <?php foreach($blogArticles as $blog_post): ?>
+                        <article class="post-box">
+                            <div class="post-inner">
+                                <div class="entry-media">
+                                    <div class="post-cat">
+                                        <span class="posted-in"><a href="#"><?= (isset($blog_post)) ? $blog_post['name_fr'] : null; ?></a> <a href="#"><?= (isset($blog_post)) ? $blog_post['sub_name_fr'] : null; ?></a></span>
+                                    </div>
+                                    <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><img src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($blog_post)) ? $blog_post['filename'] : null; ?>" alt=""></a>
+                                </div>
+                                <div class="inner-post">
+                                    <div class="entry-header">
+                                        <div class="entry-meta">
+                                            <span class="posted-on">_ <a href="#"><?= (isset($blog_post)) ? date('d-m-Y H:i', strtotime($blog_post['created_at']))  : null; ?></a></span>
+                                            <span class="byline">_ <a class="url fn n" href="#">Iew Admin</a></span>
+                                             
+                                        </div>
+                                        <h3 class="entry-title"><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><?= (isset($blog_post)) ? $blog_post['title'] : null; ?></a></h3>
+                                    </div>
+                                    <div class="entry-summary the-excerpt">
+                                        <p><?= (isset($blog_post)) ? substr($blog_post['content'],0 , 200)."..." : null; ?></p>
+                                    </div>
+                                    <div class="btn-readmore"><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $blog_post['slug'],
+                                                                                'sub_category_name' => $blog_post['sub_slug'],
+                                                                                'post_name' => $blog_post['post_slug']]) ?>"><i class="flaticon-right-arrow-1"></i> Lire </a></div>
+                                </div>
+                            </div>
+                        </article>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                     
+                     <!--   <article class="post-box">
+                            <div class="post-inner">
+                                <div class="entry-media">
+                                    <div class="post-cat">
+                                        <span class="posted-in"><a href="#">Development</a></span>
+                                    </div>
+                                    <div class="gallery-post img-slider owl-carousel owl-theme">
+                                        <div class="item-image">
+                                            <img src="https://via.placeholder.com/870x520.png" alt="">
+                                        </div>
+                                        <div class="item-image">
+                                            <img src="https://via.placeholder.com/870x520.png" alt="">
+                                        </div>
+                                        <div class="item-image">
+                                            <img src="https://via.placeholder.com/870x520.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner-post">
+                                    <div class="entry-header">
+                                        <div class="entry-meta">
+                                            <span class="posted-on">_ <a href="#">November 21, 2019</a></span>
+                                            <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                            <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                        </div>
+                                        <h3 class="entry-title"><a href="post.html">The Future of Enterprise API Development</a></h3>
+                                    </div>
+                                    <div class="entry-summary the-excerpt">
+                                        <p>The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal of creating a completely positive first page of search engine results for a specific term…</p>
+                                    </div>
+                                    <div class="btn-readmore"><a href="post.html"><i class="flaticon-right-arrow-1"></i> LEARN MORE</a></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="post-box">
+                            <div class="post-inner">
+                                <div class="entry-media">
+                                    <div class="post-cat">
+                                        <span class="posted-in"><a href="#">Technology</a> <a href="#">Development</a></span>
+                                    </div>
+                                </div>
+                                <div class="quote-box padding-box font-second">
+                                    <i class="flaticon-edit-tools-1"></i>
+                                    <div class="quote-text">
+                                        I cannot give you the formula for success, but I can give you the formula for failure. It is: Try to please everybody.
+                                        <span>- Herbert Bayard Swope</span>
+                                    </div>
+                                </div>
+                                <div class="inner-post">
+                                    <div class="entry-header">
+                                        <div class="entry-meta">
+                                            <span class="posted-on">_ <a href="#">November 21, 2019</a></span>
+                                            <span class="byline">_ <a class="url fn n" href="#">Tom Black</a></span>
+                                            <span class="comment-num">_ <a href="#">3 Comments</a></span>
+                                        </div>
+                                        <h3 class="entry-title"><a href="post.html">The Next Big Challenge for Content Marketer</a></h3>
+                                    </div>
+                                    <div class="entry-summary the-excerpt">
+                                        <p>The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal of creating a completely positive first page of search engine results for a specific term…</p>
+                                    </div>
+                                    <div class="btn-readmore"><a href="post.html"><i class="flaticon-right-arrow-1"></i> LEARN MORE</a></div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        
+                     
+                        <ul class="page-pagination none-style">
+                            <li><a class="prev page-numbers" href="#"><i class="flaticon-back"></i></a></li>
+                            <li><a class="page-numbers" href="#">1</a></li>
+                            <li><span aria-current="page" class="page-numbers current">2</span></li>
+                            <li><a class="page-numbers" href="#">3</a></li>
+                            <li><a class="next page-numbers" href="#"><i class="flaticon-right-arrow-1"></i></a></li>
+                        </ul>-->
+                    </div>
+                    <div class="widget-area primary-sidebar col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                   
+                        <aside class="widget widget_categories">
+                            <h5 class="widget-title">Catégories</h5>
+                            <ul>
+                                <?php if(isset($categoriesByPostCounts)) : ?>
+                                    <?php foreach($categoriesByPostCounts as $cat_count): ?>
+                                        <li><a href="#"><?= (isset($cat_count))? $cat_count['name_fr'] : null; ?></a> <span class="posts-count">(<?= (isset($cat_count))? $cat_count['nbre_posts'] : null; ?>)</span></li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </aside>
+                 
+                        <?php echo $this->partial('partials/blog/recents.phtml' , ['recentBlogs' => $recentBlogs]); ?>
+                        
+                        <aside class="widget widget_tag_cloud">
+                            <h5 class="widget-title">Tags</h5>
+                            <div class="tagcloud">
+                                <a href="#">business</a>
+                                <a href="#">marketing</a>
+                                <a href="#">SEO</a>
+                                <a href="#">SMM</a>
+                                <a href="#">solution</a>
+                                <a href="#">startup</a>
+                                <a href="#">strategy</a>
+                                <a href="#">tips</a>
+                            </div>
+                        </aside>
+                        <aside class="widget widget_media_image">
+                            <a href="contact.html"><img src="https://via.placeholder.com/271x350.png" alt=""></a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>

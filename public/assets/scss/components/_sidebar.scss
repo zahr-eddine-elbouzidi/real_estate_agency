@@ -1,0 +1,224 @@
+/*===========================
+43. Start Sidebar Style CSS
+=============================*/
+
+// Sidebar Item Style
+.sidebar {
+
+  &-wrapper {
+    background-color: $white;
+    border: 1px solid $borderColor;
+    padding: 42px 30px;
+
+    @media #{$md-device} {
+      margin-top: 90px;
+    }
+
+    @media #{$sm-device} {
+      margin-top: 60px;
+    }
+
+    &.shop-page {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &-item {
+    margin-bottom: 70px;
+
+    @media #{$md-device} {
+      margin-bottom: 50px;
+    }
+
+    @media #{$sm-device} {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    border-left: 4px solid $brandColor;
+    color: $headingColor;
+    font-size: 18px;
+    font-family: $baseFont;
+    padding: 14px 18px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      background-image: linear-gradient(-90deg, transparent 0%, #000 100%);
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: .04;
+    }
+  }
+
+  // Sidebar List
+  &-list {
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      a {
+        color: $paragraph;
+
+        &:hover {
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
+
+// Search Box Style
+.sidebar-search-box {
+  .input-item {
+    position: relative;
+    margin: 0;
+
+    input {
+      transition: 0.4s;
+      padding-right: 30px;
+
+      &:focus {
+        border-bottom-color: $brandColor;
+      }
+
+      &::placeholder {
+        color: $paragraph;
+      }
+    }
+
+    .btn-src {
+      font-size: 18px;
+      line-height: 1;
+      color: $brandColor;
+      position: absolute;
+      right: 0;
+      top: 5px;
+
+      @media #{$sm-device} {
+        top: 6px;
+      }
+    }
+  }
+}
+
+// Tags Style
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 5px;
+
+    &:after {
+      content: ',';
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    a {
+      color: $paragraph;
+
+      &:hover {
+        color: $brandColor;
+      }
+    }
+  }
+}
+
+// Top Rated Product
+.top-rated-prod-item {
+  display: flex;
+
+  &:nth-child(1n + 2) {
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+    margin-top: -3px;
+    font-family: $baseFont;
+
+    a {
+      color: $headingColor;
+
+      &:hover {
+        color: $brandColor;
+      }
+    }
+  }
+
+  .rating {
+    color: $yellow;
+    line-height: 1;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .price-group {
+    font-weight: 600;
+    font-size: 15px;
+
+    .price-old {
+      opacity: 0.8;
+      margin-right: 5px;
+    }
+
+    .price {
+      color: $headingColor;
+    }
+  }
+
+  .prod-thumb {
+    max-width: 80px;
+    flex-basis: 100px;
+    margin-right: 20px;
+  }
+}
+
+// Recent Post
+.recent-posts-item {
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .post {
+    &-title {
+      color: $headingColor;
+      display: block;
+      font-size: 16px;
+      font-family: $headingFont;
+      font-weight: 500;
+
+      &:hover {
+        color: $brandColor;
+      }
+    }
+
+    &-date {
+      font-size: 14px;
+      margin-top: -3px;
+      display: block;
+    }
+  }
+}

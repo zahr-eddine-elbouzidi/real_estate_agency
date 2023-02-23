@@ -1,0 +1,66 @@
+<section class="why-project">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="ot-heading mb-0">
+                                <span class="text-light">// Dernières articles</span>
+                                <h2 class="text-white main-heading">Articles</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 align-self-end">
+                            <p class="text-light mb-0">International Education Window vous offre des services variés et met à votre disposition tous les outils nécessaires pour faire Un choix judicieux pour votre carrière.</p>
+                        </div>
+                        <div class="col-lg-2 align-self-end">
+                            <div class="ot-button">
+                                <a href="portfolio-grid.html" class="btn-details"><i class="flaticon-right-arrow-1"></i> En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-40"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme project-slider">
+
+                        <?php if(isset($postsArticles)): ?>
+                                    <?php foreach($postsArticles as $post_art): ?>
+                            <div class="project-item projects-style-2">
+                                <div class="projects-box">
+                                    <div class="projects-thumbnail">
+                                        <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $post_art['slug'],
+                                                                                'sub_category_name' => $post_art['sub_slug'],
+                                                                                'post_name' => $post_art['post_slug']]); ?>">
+                                                                               
+                                            <img src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= $post_art['filename']; ?>" class="" alt="">                         
+                                            <span class="overlay"></span>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <div class="portfolio-info-inner">
+                                            <a class="btn-link" href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $post_art['slug'],
+                                                                                'sub_category_name' => $post_art['sub_slug'],
+                                                                                'post_name' => $post_art['post_slug']]); ?>">
+                                                                                <i class="flaticon-right-arrow-1"></i></a>
+                                            <h5><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $post_art['slug'],
+                                                                                'sub_category_name' => $post_art['sub_slug'],
+                                                                                'post_name' => $post_art['post_slug']]); ?>">
+                                                                                <?= $post_art['title']; ?></a></h5>
+                                            <p class="portfolio-cates">
+                                                <a href="#"><?= $post_art['name_fr']; ?></a><span>/</span>
+                                                <a href="#"><?= $post_art['sub_name_fr']; ?></a>
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                          
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>

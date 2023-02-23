@@ -1,0 +1,138 @@
+</main>
+<footer class="footer-area bg-blackSoft">
+        <div class="container">
+            <div class="footer-widget-wrap sp-top">
+                <div class="row">
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <div class="widget-item">
+                            <div class="about-widget">
+                                <img src="<?= $this->basePath().'/assets/' ?>img/itisde_logo_head.png" alt="IT Innovative Skills & Data Engineering"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-10 ">
+                        <div class="row mtn-md-55 mtn-sm-35">
+                            <div class="col-sm-6 col-lg-3 col-xl-2">
+                                <div class="widget-item">
+                                    <h4 class="widget-title">Catégories</h4>
+                                    <div class="widget-body">
+
+                                    
+                                        <ul class="ht-list">
+                                            <li><a href="about.html">Agence</a></li>
+                                            <li><a href="<?= $this->url('contacts', ['action' => 'index']) ?>" >Contactez-nous</a></li>
+                                            <li><a href="<?= $this->url('services', ['action' => 'index']) ?>" >Nos services</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-3 col-xl-4">
+                                <div class="widget-item">
+                                    <h4 class="widget-title">Adresse</h4>
+                                    <div class="widget-body">
+                                        <address>
+                                            
+
+                                        <?php echo $contact['address']; ?> <br> <?php echo $contact['email']; ?>
+                                            <br> <?php echo $contact['tel']; ?>
+                                        </address>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="widget-item">
+                                    <h4 class="widget-title">Réseaux Sociaux</h4>
+                                    <div class="widget-body">
+                                    <div class="social-icons light">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright-wrap">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-menu">
+                            <ul class="footer-nav nav">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Project</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="copyright-text">
+                            <p>
+                                &copy;
+                                <?php echo date('Y'); ?>
+                                , ITISDE.
+                                Made with <i class="fa fa-heart text-danger"></i>
+                                <a href="https://itinnoskills.com" target="_blank">IT Innovative Skills & Data Engineering</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Top Button -->
+    <button class="btn-scroll-top"><i class="fa fa-angle-up"></i></button>
+
+
+    <!--== Start OffCanvas Responsive Menu Area ==-->
+    <div class="offCanvas-wrapper responsive-menu left-to-right">
+        <div class="offCanvas-inner">
+            <div class="offCanvas-content-wrap">
+                <div class="offCanvas-header">
+                    <div class="logo-area">
+                        <a href="index.html"><img style="width:220px;" src="<?= $this->basePath().'/assets/' ?>img/itisde_logo.png" alt="IT Innovative Skills & Data Engineering" /></a>
+                    </div>
+                    <div class="close-action">
+                        <button class="btn-close"><i class="icon-arrows-remove"></i></button>
+                    </div>
+                </div>
+
+                <div class="responsive-mobile-menu">
+                    <!-- Note: Content Auto Generate By Jquery From Main Menu -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== End OffCanvas Responsive Menu Area ==-->
+
+
+    <!--== Start OffCanvas Search Box Area ==-->
+    <div class="offCanvas-wrapper search-box-wrapper top-to-bottom">
+        <div class="offCanvas-inner">
+            <div class="offCanvas-content-wrap">
+                <!--= Start Search Box Content  =-->
+                <div class="search-box-content-wrap text-center">
+                    <h3>Start typing and press enter!</h3>
+                    <div class="search-form-wrap">
+                        <form action="#" method="post" class="search-form">
+                            <label for="search-box" class="sr-only"></label>
+                            <input type="text" id="search-box" placeholder="Search entire website" />
+                            <button class="search-box-icon"><i class="icon-basic-magnifier"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-close"><i class="icon-arrows-remove"></i></button>
+    </div>
+    <!--== End OffCanvas Search Box Area ==-->

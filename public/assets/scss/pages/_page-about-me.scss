@@ -1,0 +1,113 @@
+/*===============================
+  37. Start About Me Page Style
+================================*/
+
+/* Start About Me Banner Area */
+.about-me-banner-content {
+  height: 840px;
+  display: table-cell;
+  vertical-align: bottom;
+  padding-bottom: 130px;
+  color: $white;
+  font-size: 20px;
+
+  @media #{$md-device} {
+    padding-bottom: 90px;
+    height: 650px;
+  }
+
+  @media #{$sm-device} {
+    padding-bottom: 60px;
+    height: 500px;
+  }
+
+  h2 {
+    color: $white;
+    line-height: 1;
+    font-family: $baseFont;
+
+    @media #{$xl-device} {
+      font-size: 56px;
+      margin-bottom: 30px;
+    }
+
+    @media #{$sm-device} {
+      font-size: 40px;
+    }
+  }
+}
+
+.about-me-txt {
+  font-size: 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  &.bio {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.about-me-skills {
+  @media #{$md-device} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media #{$sm-device} {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// About Us 3 Page Style
+.about-feature-wrapper {
+  &.about-3 {
+    @media #{$lg-device,$xl-device} {
+      height: 100vh;
+    }
+
+    @media #{$md-device,$sm-device} {
+      padding: 160px 0 100px;
+    }
+  }
+}
+
+.about-page-content-area {
+  .about-content-conference {
+    font-size: 15px;
+
+    h3 {
+      font-size: 36px;
+      font-weight: 500;
+      margin: 30px 0;
+
+      @media #{$sm-device, $md-device} {
+        margin: 15px 0;
+      }
+    }
+  }
+}
+
+// About Page Service Area
+.about-page-service-wrap{
+  .service-call-to-action{
+    padding: 30px 120px;
+
+    @media #{$sm-device,$lg-device} {
+      padding: 50px 15px;
+
+      h3{
+        font-size: 28px;
+      }
+    }
+  }
+}

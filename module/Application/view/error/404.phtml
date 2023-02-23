@@ -1,0 +1,87 @@
+<?= $this->doctype() ?>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle('ITISDE - IT Innovative Skills & Data Enginnering')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+    <meta http-equiv="refresh" content="300">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+
+
+<!-- build:css assets/css/app.min.css -->
+    <!--== Nice Select Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/nice-select.min.css" rel="stylesheet" />
+    <!--== Leaflet Map Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/leaflet.min.css" rel="stylesheet" />
+    <!--== MultiScroll Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/multiscroll.min.css" rel="stylesheet" />
+    <!--== FullPage Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/fullpage.min.css" rel="stylesheet" />
+    <!--== Odometer Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/odometer.min.css" rel="stylesheet" />
+    <!--== Magnific Popup Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== Slicknav Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/slicknav.min.css" rel="stylesheet" />
+    <!--== Headroom Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/headroom.min.css" rel="stylesheet" />
+    <!--== Slick Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/slick.min.css" rel="stylesheet" />
+    <!--== Linea Icon Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/linea.min.css" rel="stylesheet" />
+    <!--== Animate Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/animate.min.css" rel="stylesheet" />
+    <!--== Font-Awesome Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Bootstrap Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Spacing Min CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/helper.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="<?= $this->basePath().'/assets/' ?>css/style.min.css" rel="stylesheet" />
+    <!-- endbuild -->
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="preloader-active">
+
+    <main class="site-wrapper">
+        <div class="coming-soon-page-wrapper bg-img" data-bg="assets/img/extra/404.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-6 m-auto text-center">
+                        <div class="coming-soon-content error-page-mode">
+                            <figure class="warning-icon">
+                                <img src="assets/img/icons/404.png" alt="404" />
+                            </figure>
+
+                            <h3>On dirait que tu es perdu.</h3>
+                            <p>Il semble que rien n'ait été trouvé à cet endroit. Vous pouvez soit revenir à la dernière page, soit aller à la page d'accueil</p>
+                            <div class="btns-group">
+                                <a href="<?= $this->url('home', ['action' => 'index']) ?>" class="btn btn-bordered">Dernière Page</a>
+                                <a href="<?= $this->url('home', ['action' => 'index']) ?>" class="btn btn-brand">Page d'accueil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    

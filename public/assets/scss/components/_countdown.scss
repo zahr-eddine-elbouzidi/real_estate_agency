@@ -1,0 +1,74 @@
+/*======================================
+51. SStart Countdown Element Style CSS
+=========================================*/
+.ht-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .countdown-item {
+    text-align: center;
+    position: relative;
+    margin-right: 48px;
+    padding-right: 50px;
+
+    @media #{$xs-device} {
+      padding-right: 15px;
+      margin-right: 10px;
+    }
+
+    &:after {
+      color: $blackSoft;
+      font-size: 30px;
+      content: ':';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__time {
+      color: $blackSoft;
+      font-size: 56px;
+      line-height: 1;
+
+      @media #{$sm-device} {
+        font-size: 36px;
+      }
+
+      @media #{$xs-device} {
+        font-size: 20px;
+      }
+    }
+
+    &__label {
+      display: block;
+    }
+  }
+
+  &--light {
+    .countdown-item {
+
+      &:after{
+        color: $white;
+      }
+
+      &__time {
+        color: $white;
+      }
+
+      &__label {
+        color: rgba($white, 0.6);
+      }
+    }
+  }
+}

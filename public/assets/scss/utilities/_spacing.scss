@@ -1,0 +1,127 @@
+/*==========================
+3.0 - Template Spacing
+============================*/
+
+// Section Margin Top
+.sm-top {
+  margin-top: 120px;
+
+  @media #{$md-device} {
+    margin-top: 80px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 60px;
+  }
+}
+
+// Section Margin Top With Paragraph
+.sm-top-lh {
+  margin-top: 114px;
+
+  @media #{$md-device} {
+    margin-top: 73px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 55px;
+  }
+}
+
+// Section Margin Bottom
+.sm-bottom {
+  margin-bottom: 120px;
+
+  @media #{$md-device} {
+    margin-bottom: 80px;
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 60px;
+  }
+}
+
+// Section Margin Y
+.sm-y {
+  margin: 120px 0;
+
+  @media #{$md-device} {
+    margin: 80px 0;
+  }
+
+  @media #{$sm-device} {
+    margin: 60px 0;
+  }
+}
+
+// Section Padding Top
+.sp-top {
+  padding-top: 120px;
+
+  @media #{$md-device} {
+    padding-top: 80px;
+  }
+
+  @media #{$sm-device} {
+    padding-top: 60px;
+  }
+}
+
+// Section Padding Top With Paragraph
+.sp-top-lh {
+  padding-top: 114px;
+
+  @media #{$md-device} {
+    padding-top: 73px;
+  }
+
+  @media #{$sm-device} {
+    padding-top: 55px;
+  }
+}
+
+// Section Padding Bottom
+.sp-bottom {
+  padding-bottom: 120px;
+
+  @media #{$md-device} {
+    padding-bottom: 80px;
+  }
+
+  @media #{$sm-device} {
+    padding-bottom: 60px;
+  }
+}
+
+// Section Padding Y
+.sp-y {
+  padding: 120px 0;
+
+  @media #{$md-device} {
+    padding: 80px 0;
+  }
+
+  @media #{$sm-device} {
+    padding: 60px 0;
+  }
+}
+
+// Section Padding Y XL
+.sp-lg-y {
+  @media #{$xl-device} {
+    padding: 120px 0;
+  }
+}
+
+// Section Padding Y (Half)
+.sp-y-h {
+  padding: 60px 0;
+}
+
+.btn-groups{
+  &.element-page{
+    a{
+      margin-bottom: 10px;
+    }
+  }
+}

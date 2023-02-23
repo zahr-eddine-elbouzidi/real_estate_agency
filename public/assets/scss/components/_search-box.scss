@@ -1,0 +1,84 @@
+/*=============================
+26. Start Search Box Style
+===============================*/
+
+.search-box-wrapper{
+  transition-delay: 0.7s;
+  &.show{
+    .search-box-content-wrap{
+      transform: translate(-50%, -50%);
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0.6s;
+    }
+  }
+
+}
+
+.search-box-content-wrap{
+  position: absolute;
+  color: $white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -35%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+  transition-delay: 0.2s;
+  padding: 20px;
+  width: 100%;
+
+  @media #{$xl-device} {
+    max-width: 40%;
+  }
+
+  @media #{$lg-device} {
+    max-width: 70%;
+  }
+
+  h3{
+    color: $white;
+    font-weight: 300;
+
+    @media #{$sm-device} {
+      font-size: 22px;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  margin-top: 50px;
+
+  @media #{$sm-device} {
+    margin-top: 35px;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $white;
+    color: $white;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 50px 10px 20px;
+    width: 100%;
+
+    @media #{$sm-device} {
+      font-size: 20px;
+    }
+
+    &::placeholder{
+      color: $white;
+    }
+  }
+
+  .search-box-icon{
+    color: $white;
+    position: absolute;
+    top: 10px;
+    font-size: 30px;
+    right: 0;
+  }
+}

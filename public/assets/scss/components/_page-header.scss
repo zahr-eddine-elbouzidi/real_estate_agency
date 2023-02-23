@@ -1,0 +1,158 @@
+/*================================
+36. Start Page Header Style
+===================================*/
+.page-header {
+  &-content {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$md-device} {
+      height: 550px;
+    }
+
+    @media #{$sm-device} {
+      height: 450px;
+    }
+
+    h2 {
+      font-weight: 500;
+
+      @media #{$xl-device} {
+        font-size: 52px;
+      }
+    }
+
+    &--2 {
+      h2 {
+        @media #{$xl-device} {
+          font-size: 80px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &.light {
+      h2 {
+        color: $white;
+      }
+    }
+
+    &.full-height {
+      height: 100vh;
+    }
+  }
+
+  &--3 {
+    background-color: $softWhite;
+    padding: 35px 0;
+    border-left: 5px solid $brandColor;
+
+    .page-title-text {
+      h4 {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  &--4 {
+    height: 500px;
+    padding-bottom: 55px;
+
+    @media #{$md-device,$sm-device} {
+      height: 300px;
+    }
+
+    h3 {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}
+
+/*
+  Breadcrumb
+*/
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: $paragraph;
+    position: relative;
+
+    &:after {
+      content: "";
+      background-color: $paragraph;
+      display: inline-block;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 15px;
+      height: 5px;
+      width: 5px;
+
+      @media #{$xs-device} {
+        margin: 0 10px;
+      }
+    }
+
+    &.active {
+      &:after {
+        display: none;
+      }
+    }
+
+    a {
+      color: $paragraph;
+
+      &:hover {
+        color: $brandColor;
+      }
+    }
+  }
+
+  &--light {
+    li {
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+/*
+  Team Page Header
+*/
+
+.team-page-header-wrapper {
+  background-position: -90px -60px;
+
+  .team-page-header-content {
+    padding: 150px 0 200px;
+
+    @media #{$sm-device} {
+      padding: 80px 0 90px;
+    }
+
+    h1 {
+      font-size: 70px;
+      font-weight: 500;
+      font-family: $baseFont;
+      margin-bottom: 0;
+
+      @media #{$sm-device} {
+        font-size: 40px;
+      }
+
+      span {
+        color: $brandColor;
+      }
+    }
+  }
+}

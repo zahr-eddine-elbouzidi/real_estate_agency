@@ -1,0 +1,154 @@
+/*================================
+24. Start FunFact Area Style
+==================================*/
+
+.fun-fact-item {
+  background-color: $brandColor;
+  border-radius: 5px;
+  color: $white;
+  padding: 70px 30px;
+  transition: 0.4s;
+  margin-top: 30px;
+
+  @media #{$sm-device} {
+    padding: 50px 15px;
+  }
+
+  .icon {
+    color: $white;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  h3 {
+    color: $white;
+    font-family: $baseFont;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 30px;
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  // Funfact Style two
+  &--2 {
+    background-color: transparent !important;
+    padding: 0;
+
+    h3 {
+      color: $brandColor;
+    }
+
+    p {
+      color: $paragraph;
+      margin-top: 15px;
+    }
+
+    .icon{
+      color: $paragraph;
+    }
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &--3 {
+    background-color: transparent !important;
+    padding: 0;
+
+    .icon{
+      opacity: 0.5;
+    }
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.fun-fact-area-wrapper {
+  [class*="col"] {
+    &:nth-child(2) {
+      .fun-fact-item {
+        background-color: #2b7cc9;
+      }
+    }
+
+    &:nth-child(3) {
+      .fun-fact-item {
+        background-color: #0892A0;
+      }
+    }
+
+    &:nth-child(4) {
+      .fun-fact-item {
+        background-color: #0BA69A;
+      }
+    }
+  }
+}
+
+.onepage-funfact {
+  @media #{$xl-device} {
+    margin-top: -85px;
+  }
+
+  .fun-fact-item {
+    @media #{$xl-device} {
+      margin-top: 85px;
+    }
+  }
+}
+
+.funfact-heading {
+  strong {
+    color: $brandColor;
+    font-weight: 500;
+  }
+
+  h3 {
+    @extend .text-pd;
+    font-size: 48px;
+    margin: 10px 0 26px;
+
+    @media #{$md-device} {
+      font-size: 32px;
+    }
+
+    @media #{$sm-device} {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    font-weight: 500;
+    margin: 15px 0 30px;
+
+    @media #{$lg-device,$xl-device} {
+      font-size: 32px;
+    }
+
+    br {
+      @media #{$sm-device} {
+        display: block;
+      }
+    }
+
+  }
+
+  &.light {
+    * {
+      color: $white;
+    }
+  }
+}

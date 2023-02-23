@@ -1,0 +1,46 @@
+<section class="service-web-clients" style="background-image: url(<?= $this->basePath(); ?>/img/bg-map-light.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ot-heading text-center">
+                                <span>// IEW-Blog</span>
+                                <h2 class="main-heading">Découvrez nos actualités sur notre blog <br>Articles, Actualités ...</h2>
+                            </div>
+                            <div class="space-35"></div>
+                        </div>
+                        <div class="space-35"></div>
+                  
+                        <div class="col-md-12">
+                            <div class="ot-testimonials">
+                                 <div class="owl-carousel owl-theme testimonial-inner ot-testimonials-slider">
+                                <?php if(isset($postsBlogs)): ?>
+                                <?php foreach($postsBlogs as $blog): ?>    
+                                <div class="testi-item">
+                                        <div class="layer1"></div>
+                                        <div class="layer2">
+                                            <div class="t-head flex-middle">
+                                                <img src="<?= $this->basePath(); ?>/img/iew_logo_sup.png" alt="International Education Window" class="lazyloaded" data-ll-status="loaded">
+                                                    <div class="tinfo">
+                                                        <h6><?= $blog['title']; ?>,</h6>
+                                                        <span><?= $blog['name_fr']; ?> // <?= $blog['sub_name_fr']; ?></span>                             
+                                                    </div>
+                                            </div>
+                                            <div class="ttext">
+                                                <?= substr(strip_tags($blog['content']),0,160)."..."; ?> 
+                                                <div class="ot-button">
+                                                    <a href="portfolio-grid.html" class="btn-details"><i class="flaticon-right-arrow-1"></i>En savoir plus.</a>
+                                                </div>                          
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>  
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+ 

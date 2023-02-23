@@ -1,0 +1,28 @@
+<aside class="widget widget_recent_news">
+                            <h5 class="widget-title">Recent Posts</h5>
+                            <ul class="recent-news clearfix">
+                                <?php if(isset($recentPosts)) : ?>
+                                    <?php foreach($recentPosts as $recentPost) : ?>
+                                <li class="clearfix"> 
+                                    <div class="thumb">
+                                        <a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $recentPost['slug'],
+                                                                                'sub_category_name' => $recentPost['sub_slug'],
+                                                                                'post_name' => $recentPost['post_slug']]); ?>"><img   width = 70 height =70 src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($recentPost)) ? $recentPost['filename'] : null; ?>" alt=""></a>
+                                    </div>
+                                    <div class="entry-header">
+                                        <h6><a href="<?= $this->url('news', ['action' => 'post',
+                                                                                'category_name' => $recentPost['slug'],
+                                                                                'sub_category_name' => $recentPost['sub_slug'],
+                                                                                'post_name' => $recentPost['post_slug']]); ?>"><?= (isset($recentPost)) ? $recentPost['title'] : null; ?></a></h6>
+                                        <span class="post-on">
+                                            <span class="entry-date">
+                                                <a href="#"><?= (isset($recentPost)) ? date('d-m-Y H:i', strtotime($recentPost['created_at']))  : null; ?></a>
+                                                </span>
+                                            </span>
+                                    </div>
+                                </li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?> 
+                            </ul>
+</aside>

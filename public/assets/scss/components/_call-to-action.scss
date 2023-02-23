@@ -1,0 +1,363 @@
+/*=================================
+17. Start Call to Action Style
+==================================*/
+
+.call-to-action {
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    color: $white;
+
+    @media #{$sm-device} {
+      display: block;
+      height: auto;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: $white;
+      font-weight: 500;
+    }
+
+    h3 {
+      @media #{$md-device} {
+        font-size: 30px;
+      }
+    }
+
+    .btn {
+      &:not(.btn-white):not(.btn-brand) {
+        color: $white;
+
+        &:hover {
+          border-color: $white;
+          background-color: $white;
+          color: $brandColor;
+        }
+      }
+
+      @media #{$sm-device} {
+        margin-top: 22px;
+      }
+    }
+
+    &.marketing-agency {
+      color: $paragraph;
+
+      h2 {
+        font-family: $fontPD;
+        font-weight: 700;
+      }
+
+      .btn {
+        @media #{$xl-device, $lg-device} {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &--black {
+      color: $paragraph;
+
+      h3 {
+        color: $headingColor;
+      }
+    }
+  }
+
+  &-thumb {
+    height: 100%;
+  }
+
+  &--startup {
+    .call-to-action {
+      &-content {
+        height: 560px;
+        padding: 30px;
+
+        @media #{$sm-device} {
+          height: auto;
+          padding: 100px 15px;
+        }
+
+        @media only screen and (min-width: 1450px) {
+          padding: 0 150px;
+        }
+
+        h2 {
+          @media #{$xl-device} {
+            font-size: 52px;
+          }
+        }
+
+        .btns-group {
+          margin-top: 80px;
+
+          @media #{$lg-device, $md-device} {
+            margin-top: 50px;
+          }
+
+          @media #{$sm-device} {
+            margin-top: 25px;
+
+            .btn-bordered {
+              margin-top: 0;
+
+              @media #{$xxs-device} {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      &-thumb {
+        @media #{$sm-device} {
+          height: 300px;
+        }
+      }
+    }
+
+    .row {
+      margin: 0 -5px;
+
+      [class*="col"] {
+        padding: 0 5px;
+      }
+    }
+  }
+
+  &--fashion-store {
+    .call-to-action {
+      &-content {
+        border: 7px solid transparent;
+        border-image: linear-gradient(to right, #4031cd 0%, #ff96a3 100%);
+        border-image-slice: 1;
+        height: 130px;
+        padding: 0 100px;
+
+        @media #{$md-device} {
+          padding: 0 20px;
+        }
+
+        @media #{$sm-device} {
+          padding: 30px 20px;
+          height: auto;
+        }
+
+        h3 {
+          font-size: 24px;
+          color: $headingColor;
+          margin: 0;
+
+          @media #{$sm-device} {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &--multipurpose {
+    position: relative;
+
+    @media screen and (min-width: 1600px) {
+      margin-top: 200px;
+    }
+
+    .call-to-action {
+      &-content {
+        display: block;
+        height: auto;
+        padding: 0;
+
+        h2 {
+          @media #{$xl-device} {
+            font-size: 52px;
+            margin-bottom: 30px;
+          }
+        }
+
+        h5 {
+          color: lighten($brandColor, 10%);
+
+          @media #{$xl-device} {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      &-thumb {
+        position: absolute;
+        left: 100px;
+        top: -80px;
+
+        @media screen and (max-width: 1600px) {
+          max-width: 500px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: auto;
+        }
+
+        @media screen and (max-width: 1400px) {
+          left: 50px;
+        }
+
+        @media screen and (max-width: 1300px) {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+
+  &--app-landing, &--corporate {
+    .call-to-action {
+      &-content {
+        color: $paragraph;
+        font-size: 20px;
+        display: block;
+        height: auto;
+        position: relative;
+        padding: 0;
+
+        .download-text {
+          color: $black;
+          font-size: 200px;
+          font-weight: 700;
+          line-height: 1;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+          z-index: -1;
+          opacity: 0.05;
+
+          @media #{$md-device} {
+            font-size: 130px;
+          }
+
+          @media #{$sm-device} {
+            font-size: 80px;
+          }
+
+          @media #{$xxs-device} {
+            font-size: 60px;
+          }
+        }
+
+        h2 {
+          color: $headingColor;
+          font-size: 55px;
+          font-weight: 700;
+          margin-bottom: 0;
+          margin-top: 37px;
+
+          @media #{$sm-device} {
+            margin-top: 20px;
+            font-size: 30px;
+          }
+        }
+
+        .icon {
+          font-size: 100px;
+          line-height: 1;
+          color: $brandColor;
+        }
+
+        p {
+          margin-top: 30px;
+
+          @media #{$sm-device} {
+            margin-top: 20px;
+          }
+        }
+
+        .download-buttons {
+          margin-top: 47px;
+
+          @media #{$sm-device} {
+            margin-top: 27px;
+          }
+
+          a {
+            display: inline-block;
+
+            &:not(:last-child) {
+              margin-right: 25px;
+
+              @media #{$sm-device} {
+                margin-right: 10px;
+              }
+
+              @media #{$xxs-device} {
+                margin-right: 0;
+                margin-bottom: 10px;
+                display: inline-block;
+              }
+            }
+
+            &:hover {
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--corporate {
+    .call-to-action-content {
+      h2 {
+        font-weight: 500;
+        font-family: $baseFont;
+      }
+
+      .download-buttons {
+        .btn {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+
+          &-bordered {
+            color: $paragraph;
+          }
+
+          &:hover {
+            background-color: $blackSoft;
+            color: $white;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--product-landing {
+    .call-to-action-content {
+      position: relative;
+
+      h3{
+        margin-bottom: 0;
+        margin-top: 5px;
+
+        @media #{$lg-device, $xl-device} {
+          padding-left: 70px;
+        }
+      }
+
+      &:before {
+        background-image: url("../img/call-to-action/product-landing.png");
+        content: '';
+        position: absolute;
+        height: 155px;
+        width: 155px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+  }
+}

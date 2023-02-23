@@ -1,0 +1,815 @@
+/*============================
+03. Common Style CSS
+==============================*/
+
+/*------------------
+3.1 - Buttons Style
+--------------------*/
+.btn-groups {
+  margin-top: 34px;
+
+  .btn {
+    margin-top: 0 !important;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.btn {
+  border-radius: 100px;
+  display: inline-block;
+  outline: none;
+  font-size: 14px;
+  font-family: $headingFont;
+  font-weight: 500;
+  position: relative;
+  padding: 18px 38px;
+  transition: 0.4s ease-in;
+  line-height: 1;
+
+  @media #{$md-device, $sm-device} {
+    padding: 15px 30px;
+  }
+
+  @media #{$xs-device} {
+    padding: 13px 25px;
+    font-size: 12px;
+  }
+
+  &:focus, &:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &-bordered {
+    border: 2px solid darken($white, 13.4%);
+    color: $blackSoft;
+
+    &:hover {
+      border-color: $blackSoft;
+    }
+  }
+
+  &-brand {
+    background-color: $brandColor;
+    color: $white;
+
+    &:hover {
+      background-color: darken($blackSoft, 5%);
+      color: $white;
+    }
+  }
+
+  &-white {
+    background-color: $white;
+    color: $brandColor;
+
+    &:hover {
+      background-color: $brandColor;
+      color: $white;
+    }
+  }
+
+  &-black {
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $brandColor;
+    }
+  }
+
+  &-red {
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $red;
+    }
+  }
+
+  &-gradient {
+    background: rgb(121, 47, 250);
+    background: linear-gradient(left, rgb(121, 47, 250) 0%, rgb(13, 80, 170) 100%);
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &-gradient-2 {
+    background: rgb(242, 0, 70);
+    background: linear-gradient(left, rgb(242, 0, 70) 0%, rgb(255, 175, 1) 100%);
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &-border-bottom {
+    border-bottom: 2px solid $borderColor;
+    border-radius: 0;
+    color: $blackSoft;
+    padding: 0 0 5px;
+
+    &:hover {
+      border-bottom-color: $brandColor;
+    }
+  }
+
+  &-hvr-brand {
+    border: 2px solid $brandColor;
+    color: $white;
+
+    &:hover {
+      background-color: $brandColor;
+      color: $white;
+    }
+  }
+}
+
+/*----------------------
+3.2 - Background Image
+-----------------------*/
+.bg-img {
+  background: no-repeat center center;
+  background-size: cover;
+
+  &-tr {
+    background: no-repeat top right;
+  }
+
+  &-tl {
+    background: no-repeat top left;
+  }
+
+  &-br {
+    background: no-repeat bottom right;
+  }
+
+  &-bl {
+    background: no-repeat bottom left;
+  }
+
+  &-nr {
+    background: no-repeat center center;
+    background-size: contain;
+  }
+}
+
+/*-----------------
+3.3 - Overflow
+-------------------*/
+.fix {
+  overflow: hidden;
+
+  &-x {
+    overflow-x: hidden;
+  }
+
+  &-y {
+    overflow-y: hidden;
+  }
+}
+
+/*-------------------------
+3.4 - Section title Style
+--------------------------*/
+.section-title {
+  margin-bottom: 82px;
+
+  @media #{$md-device} {
+    margin-bottom: 52px;
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 39px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: -5px;
+
+    @media #{$xs-device} {
+      font-size: 30px;
+    }
+
+    strong, span {
+      color: $brandColor;
+    }
+  }
+
+  p {
+    margin-top: 18px;
+  }
+
+  &--2 {
+    h3 {
+      @media #{$xl-device} {
+        font-size: 60px;
+        margin-top: -12px;
+      }
+    }
+  }
+
+  &--3 {
+    h3 {
+      @media #{$xl-device} {
+        font-size: 52px;
+        margin-top: -12px;
+        font-family: $baseFont;
+      }
+    }
+  }
+
+  &--4 {
+    h3 {
+      @media #{$lg-device,$xl-device} {
+        font-family: $baseFont;
+        font-size: 60px;
+        font-weight: 600;
+        margin-top: -12px;
+      }
+    }
+  }
+
+  &.white {
+    color: $softWhite;
+
+    h3, h2 {
+      color: $white;
+    }
+  }
+}
+
+/*-------------------------
+3.5 - List Style
+--------------------------*/
+.ht-list {
+  li {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .no, .icon {
+      margin-right: 10px;
+    }
+
+    a {
+      color: $paragraph;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &-check {
+    li {
+      padding-left: 25px;
+
+      &:before {
+        color: $paragraph;
+        content: '\f00c';
+        font-family: $fa-icon;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        transition: 0.4s;
+        font-size: 80%;
+      }
+    }
+  }
+
+  &-brand {
+    li {
+      &:before, .icon, .no {
+        color: $brandColor;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+3.6 - Site Content Wrapper
+----------------------------------*/
+.site-wrapper {
+  background-color: $white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &--side-menu {
+    @media screen and (min-width: 1500px) {
+      margin-left: 300px;
+    }
+  }
+}
+
+/*--------------------------------
+3.7 - Tippy Customization
+----------------------------------*/
+.tippy-popper {
+  .tippy-tooltip {
+    background-color: $secondaryColor;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 7px 13px;
+  }
+
+  &[x-placement^='top'] {
+    .tippy-arrow {
+      border-top-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='bottom'] {
+    .tippy-arrow {
+      border-bottom-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='left'] {
+    .tippy-arrow {
+      border-left-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='right'] {
+    .tippy-arrow {
+      border-right-color: $secondaryColor !important;
+    }
+  }
+}
+
+/*----------------------------------
+3.8 - Magnific Popup Customization
+-----------------------------------*/
+.ht-mfp {
+  transition: 0.4s;
+
+  &.mfp-bg {
+    background: $black;
+    transition: 0.4s;
+  }
+
+  .mfp-content {
+    transition: 0.3s;
+
+    @media #{$xl-device} {
+      max-width: 70%;
+    }
+
+    .mfp-close {
+      display: none;
+    }
+  }
+
+  .mfp-close {
+    background-color: $secondaryColor;
+    color: $white;
+    padding: 0;
+    text-align: center;
+    opacity: 1;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+
+    @media #{$sm-device} {
+      top: 30px;
+      right: 30px;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+    }
+
+    &:hover {
+      background-color: $brandColor;
+    }
+  }
+
+  .mfp-arrow {
+    background-color: $brandColor;
+    opacity: 1;
+    margin-left: 15px;
+    height: 55px;
+    width: 55px;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      content: '\f104';
+      color: $white;
+      font-family: $fa-icon;
+      font-size: 25px;
+      line-height: 40px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-right {
+      margin-left: auto;
+      margin-right: 15px;
+
+      &:after {
+        content: '\f105';
+      }
+    }
+
+    &:hover {
+      background-color: darken($secondaryColor, 10%);
+    }
+  }
+
+  &.zoom-animate {
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+    .mfp-content {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+
+    // Animate In
+    &.mfp-ready {
+      &.mfp-bg {
+        opacity: 0.9;
+      }
+
+      .mfp-content {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    // Animate Out
+    &.mfp-removing {
+      .mfp-content {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+
+      &.mfp-bg {
+        opacity: 0;
+      }
+
+      .mfp-close {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+3.9 - Nice Select Customization
+----------------------------------*/
+.nice-select {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid $borderColor;
+  color: $paragraph;
+  float: inherit;
+  font-size: 17px;
+  padding-left: 0;
+
+  &:hover, &:focus {
+    border-bottom-color: $brandColor;
+  }
+
+  &:after {
+    border-right-color: $brandColor;
+    border-bottom-color: $brandColor;
+    height: 7px;
+    width: 7px;
+  }
+
+  .list {
+    border-radius: 0;
+    color: $headingColor;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+}
+
+/*--------------------------------
+3.10 - Slick Slider Customization
+----------------------------------*/
+.slick {
+
+  &-list {
+    div > div {
+      vertical-align: middle;
+    }
+  }
+
+  &-dots-round {
+    .slick-dots {
+      display: flex;
+      margin-top: 52px;
+
+      @media #{$md-device} {
+        margin-top: 43px;
+      }
+
+      @media #{$sm-device} {
+        margin-top: 35px;
+      }
+
+      li {
+        margin-right: 10px;
+        line-height: 1;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        button {
+          border: 3px solid rgba($white, 0.2);
+          border-radius: 50%;
+          text-indent: -999999999px;
+          height: 16px;
+          width: 16px;
+        }
+
+        &.slick-active {
+          button {
+            border-color: $white;
+          }
+        }
+      }
+    }
+
+    &.text-center {
+      .slick-dots {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    &.black {
+      .slick-dots {
+        li {
+          button {
+            border-color: $borderColor;
+          }
+
+          &.slick-active {
+            button {
+              border-color: $brandColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-arrow {
+    font-size: 60px;
+    line-height: 1;
+    opacity: 0.2;
+    position: absolute;
+    right: calc(100% + 30px);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+    z-index: 99;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    @media #{$md-device, $lg-device, $xlmax-device} {
+      left: 15px;
+      right: auto;
+    }
+
+    &.slick-next {
+      right: auto;
+      left: calc(100% + 30px);
+
+      @media #{$md-device, $lg-device, $xlmax-device} {
+        right: 15px;
+        left: auto;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+3.11 - Container Customization
+----------------------------------*/
+.container-fluid {
+  padding: 0 15px;
+  margin: auto;
+
+  @media #{$xl-device} {
+    padding: 0 100px;
+  }
+
+  @media #{$md-device} {
+    max-width: 720px;
+  }
+
+  @media #{$sm-device} {
+    max-width: 540px;
+  }
+}
+
+/*--------------------------------
+3.12 - Blockquote Style
+----------------------------------*/
+blockquote, .blockquote {
+  color: $white;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 42px 44px 80px;
+  position: relative;
+
+  @media #{$sm-device} {
+    padding: 20px 22px 60px;
+  }
+
+  &:before {
+    content: '\f10e';
+    font-family: $fa-icon;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    @media #{$sm-device} {
+      right: 30px;
+      bottom: 20px;
+    }
+  }
+
+  .blockquote-title {
+    color: $secondaryColor;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1;
+
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}
+
+/*----------------------
+3.13 - Separators
+-----------------------*/
+.separator {
+  border-top: 1px solid $borderColor;
+  display: block;
+  margin: 80px 0;
+
+  @media #{$sm-device} {
+    margin: 50px 0;
+  }
+
+  &-thick {
+    border-width: 2px;
+  }
+
+  &-dash {
+    border-top-style: dashed;
+    border-top-width: 2px;
+  }
+
+  &-dot {
+    border-top-style: dotted;
+    border-top-width: 3px;
+  }
+}
+
+/*----------------------
+3.14 - Preloader
+-----------------------*/
+
+.preloader-active {
+  @extend .fix;
+
+  .preloader-wrap {
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+
+    .preloader {
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 142px;
+      height: 40px;
+      margin: -20px 0 0 -71px;
+
+      .dot {
+        background-color: $brandColor;
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 12px;
+        left: 11px;
+        border-radius: 50%;
+        transform: translateX(0);
+        animation: dot 2.8s infinite;
+      }
+
+      .dots {
+        transform: translateX(0);
+        margin-top: 12px;
+        margin-left: 31px;
+        animation: dots 2.8s infinite;
+
+        span {
+          background-color: $brandColor;
+          display: block;
+          float: left;
+          width: 13px;
+          height: 13px;
+          margin-left: 13px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  @keyframes dot {
+    50% {
+      transform: translateX(96px);
+    }
+  }
+
+  @keyframes dots {
+    50% {
+      transform: translateX(-31px);
+    }
+  }
+}
+
+// Scroll Top
+.btn-scroll-top {
+  background-color: $blackSoft;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  color: $white;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  bottom: -60px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  z-index: 999;
+  @include hide;
+
+  &:hover {
+    background-color: $brandColor;
+  }
+
+  &.show {
+    bottom: 30px;
+    @include show;
+  }
+}

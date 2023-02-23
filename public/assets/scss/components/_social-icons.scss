@@ -1,0 +1,47 @@
+/*==============================
+10. Start Social Icons Style
+================================*/
+
+.social-icons {
+  a {
+    color: $blackSoft;
+    font-size: 20px;
+    line-height: 1;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover{
+      color: $secondaryColor;
+    }
+
+  }
+
+  &--large{
+    a {
+      font-size: 40px;
+
+      @media #{$sm-device} {
+        font-size: 25px;
+      }
+
+      &:not(:last-child) {
+        @media #{$xl-device} {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  &.light{
+    a{
+      color: $white;
+
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}

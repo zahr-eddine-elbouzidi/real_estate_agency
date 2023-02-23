@@ -1,0 +1,363 @@
+/*=============================
+07. Start Portfolio Style
+==============================*/
+
+.portfolio-item {
+  position: relative;
+  margin-top: 30px;
+
+  &:before {
+    @include overlay($black, 0.9);
+    @include hide;
+    pointer-events: none;
+  }
+
+  &-info {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    @include hide;
+    padding: 20px 15px;
+    width: 100%;
+
+    h4 {
+      font-size: 20px;
+      font-family: $baseFont;
+      margin-bottom: 5px;
+
+      a {
+        color: $white;
+      }
+    }
+
+    .cate-name {
+      font-size: 15px;
+      color: $ashColor;
+    }
+  }
+
+  &-thumb{
+    img{
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    &:before {
+      @include show;
+    }
+
+    .portfolio-item {
+      &-info {
+        transform: translate(-50%, -50%);
+        @include show;
+      }
+    }
+  }
+
+
+  // Portfolio Style 2
+  &--2 {
+    margin-top: 0;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      .portfolio-item-info {
+        @media #{$sm-device} {
+          transform: none;
+        }
+      }
+    }
+
+    .portfolio-item {
+      &-info {
+        transform: translate(-50%, -50%);
+        @include show;
+
+        @media #{$sm-device} {
+          position: static;
+          transform: none;
+          padding-top: 25px;
+          padding-bottom: 40px;
+        }
+
+        .cate-name {
+          font-size: 18px;
+          font-weight: 500;
+          color: $brandColor;
+          display: inline-block;
+          font-family: $headingFont;
+          margin-bottom: 40px;
+
+          @media #{$md-device, $sm-device} {
+            margin-bottom: 20px;
+          }
+        }
+
+        h4 {
+          font-size: 30px;
+          font-family: $headingFont;
+
+          @media #{$md-device, $sm-device} {
+            font-size: 26px;
+          }
+
+          a {
+            color: $headingColor;
+
+            &:hover {
+              color: $secondaryColor;
+            }
+          }
+        }
+
+        .btn-bordered {
+          margin-top: 33px;
+
+          @media #{$md-device, $sm-device} {
+            margin-top: 25px;
+          }
+
+          &:hover {
+            background-color: $blackSoft;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  // Portfolio Style 3
+  &--3 {
+
+    &:before {
+      display: none;
+    }
+
+    .portfolio-item {
+      &-thumb {
+        position: relative;
+
+        &:before {
+          @include overlay($brandColor, 0.8);
+          @include hide;
+        }
+
+        .btn-plus {
+          color: $white;
+          font-size: 80px;
+          line-height: 1;
+          height: 80px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1.5);
+          @include hide;
+        }
+      }
+
+      &-info {
+        position: static;
+        transform: none;
+        @include show;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 30px;
+
+        h4 {
+          font-family: $headingFont;
+
+          a {
+            color: $headingColor;
+          }
+        }
+
+        .cate-name {
+          font-size: 17px;
+          color: $paragraph;
+        }
+      }
+    }
+
+    &:hover {
+      .portfolio-item-info {
+        transform: none;
+      }
+
+      .portfolio-item-thumb {
+        &:before {
+          @include show;
+        }
+
+        .btn-plus {
+          transform: translate(-50%, -50%) scale(1);
+          @include show;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-area-button {
+  margin-top: 80px;
+
+  @media #{$md-device} {
+    margin-top: 60px;
+  }
+
+  @media #{$sm-device} {
+    margin-top: 40px;
+  }
+}
+
+.portfolio-multipurpose-wrap {
+  border: 1px solid $borderColor;
+  margin-right: 50px;
+
+  @media #{$xs-device} {
+    margin-right: 0;
+    padding-bottom: 40px;
+  }
+
+  .slick-dots-round {
+    .slick-dots {
+      margin-top: 0;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(100% + 34px);
+
+      @media #{$xs-device} {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      li {
+        margin-right: 0;
+        margin-bottom: 5px;
+
+        @media #{$xs-device} {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        button {
+          border: 3px solid rgba(34, 34, 34, .2);
+          border-radius: 50%;
+          text-indent: -999999999px;
+          height: 16px;
+          width: 16px;
+        }
+
+        &.slick-active {
+          button {
+            border-color: $brandColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-item {
+  margin-top: 100px;
+  display: flex;
+
+  @media #{$sm-device} {
+    margin-top: 40px;
+    padding: 0 15px;
+    display: block;
+  }
+
+  &__info {
+    margin-left: 20px;
+    width: 200px;
+
+    @media #{$md-device} {
+      width: 120px;
+    }
+
+    @media #{$sm-device} {
+      margin-top: 20px;
+      margin-left: 0;
+      width: auto;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .link, .title {
+      transform: rotate(90deg);
+      white-space: nowrap;
+      transform-origin: 0 0;
+      margin: 0;
+    }
+
+    .title {
+      @media #{$xl-device} {
+        max-width: 100px;
+      }
+    }
+
+    h4 {
+      transform: translate(0, -100%);
+
+      @media #{$lg-device,$xl-device} {
+        font-size: 28px;
+      }
+    }
+
+    .btn {
+      transform: translate(-65px, calc(-100% - 4px));
+
+      &-bordered-bottom {
+        border-bottom-color: $borderColor;
+      }
+    }
+
+    .title, .link, .title h4, .link .btn {
+      @media #{$sm-device} {
+        transform: none;
+        white-space: normal;
+      }
+    }
+  }
+
+  &__thumb {
+    overflow: hidden;
+
+    img {
+      transition: 0.4s;
+    }
+  }
+
+  &:hover {
+    .project-item__thumb {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.slick-slide{
+  .portfolio-item--3{
+    margin-top: 0;
+  }
+}

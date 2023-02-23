@@ -1,0 +1,141 @@
+/*===============================
+38. Start Contact Page Style
+================================*/
+
+.contact-split-content {
+  padding-left: 120px;
+  padding-right: 120px;
+
+  @media #{$lg-device, $md-device} {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media #{$sm-device} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-info-content {
+    height: auto;
+
+    h4 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .contact-info-item {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @media #{$md-device} {
+        margin-bottom: 60px;
+      }
+
+      @media #{$sm-device} {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.contact-form-area{
+  h4{
+    color: $brandColor;
+    font-size: 18px;
+    font-family: $baseFont;
+  }
+}
+
+/*
+Form Input Style
+*/
+.input-item {
+  margin-top: 50px;
+
+  input, textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $borderColor;
+    display: block;
+    padding: 0 0 10px;
+    transition: 0.3s;
+    resize: none;
+    width: 100%;
+
+    &:focus {
+      border-bottom-color: $brandColor;
+    }
+  }
+
+  &--classic{
+    input,textarea{
+      border: 1px solid $borderColor;
+      padding: 13px 20px;
+
+      &:focus,&:active{
+        border-color: $brandColor;
+      }
+    }
+  }
+
+  &.light{
+    input,textarea{
+      border-bottom-color: rgba($white, 0.5);
+      color: $white;
+    }
+  }
+}
+
+
+/*
+Start Map Style
+*/
+
+.map {
+  #map{
+    height: 100%;
+  }
+
+  &.map-onepage {
+    height: 500px;
+
+    @media #{$sm-device} {
+      height: 350px;
+    }
+  }
+
+  &.contact-map-split {
+    height: 100%;
+
+    @media #{$sm-device} {
+      height: 350px;
+    }
+  }
+}
+
+/*
+Contact Banner Style
+*/
+.contact-banner-content{
+  background-color: $white;
+  padding: 50px;
+
+  @media #{$sm-device} {
+    padding: 50px 15px;
+  }
+
+  h4{
+    color: $brandColor;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: $baseFont;
+  }
+
+  h6{
+    font-size: 26px;
+    font-family: $baseFont;
+    margin: 15px 0 27px;
+    line-height: 1.4;
+  }
+}

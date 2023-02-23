@@ -1,0 +1,107 @@
+<?= $this->headTitle($postSelected['title'].'-'.$postSelected['name_fr'].'-'.$postSelected['sub_name_fr'].' - IEW - International Education Window')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+
+<?php echo $this->partial("partials/header.phtml", 
+                            ['categories' => $categories ,
+                            'subcats' => $subcats ,
+                            'contact' => $contact,
+                            'form' => $form,
+                            'candidatForm' => $candidatForm]); ?>
+
+
+
+
+
+
+ <!--== About Feature Area ==-->
+ <div class="about-feature-wrapper about-3 bg-img" data-bg="<?= $this->basePath().'/assets/' ?>img/about-3-features.jpg">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-6">
+                        <div class="section-title section-title--3 mb-md-0">
+                            <h3 class="color-brand font-weight-bold"><?= (isset($postSelected)) ? $postSelected['sub_name_fr'] : null; ?></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="about-feature-wrap about-feature--creative-agency">
+                            <div class="row mtn-100 mtn-sm-30 mtn-md-50">
+                                <div class="col-md-10">
+                                    <div class="icon-box icon-box--mini light">
+                                        <div class="icon-box-icon">
+                                            <i class="icon-basic-signs"></i>
+                                        </div>
+
+                                        <div class="icon-box-info pr-0">
+                                            <h4><?= (isset($postSelected)) ? $postSelected['sub_name_fr'] : null; ?></h4>
+                                            <p> <?= (isset($postSelected)) ? preg_replace('/'.$prefix_letter.'/', '', $postSelected['content'], 0)   : null; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 
+
+                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== About Feature Area ==-->
+
+        <!--== About Page Content Area ==-->
+        <div class="about-page-content-area sm-top">
+            <div class="container">
+                <div class="row">
+
+            
+                    <div class="col-lg-12">
+                  
+
+                    <div class="gradient-bg-wrapper">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 col-lg-6 text-center">
+                                <div class="gradient-bg-item bg-gradient">
+                                    <div class="py-5">
+                                        <h3 class="mb-3">Applications.</h3>
+                                        <p><?= (isset($postSelected)) ? $postSelected['sub_name_fr'] : null; ?></p>
+                                        <p><?= (isset($postSelected)) ? preg_replace('/'.$prefix_letter.'/', '', $postSelected['content'], 0)   : null; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 text-center">
+                                <div class="gradient-bg-item bg-gradient">
+                                    <div class="py-5">
+                                    <img src="<?= $this->basePath(); ?>/uploadsFiles/posts/<?= (isset($postSelected)) ? $postSelected['filename'] : null; ?>" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-lg-4">
+                         
+                             
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!--== About Page Content Area ==-->
+
+
+
+
+
+
+
+ 
+<?php echo $this->partial("partials/footer.phtml" , ['categories' => $categories ,
+                            'subcats' => $subcats ,'contact' => $contact]); ?>
+
+
+ 
