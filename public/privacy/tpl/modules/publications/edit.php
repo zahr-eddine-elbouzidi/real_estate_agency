@@ -17,12 +17,12 @@
 
 <div class="bg-light lter b-b wrapper-md"  >
   <div>
-   <h4>Gestion d'articles</h4>
+   <h4>Gestion des annonces</h4>
    <ul class="breadcrumb bg-white b-a">
     <li><a ui-sref="app.dashboard-v1" ><i class="fa fa-home"></i> Accueil</a></li>
     <li><a ui-sref="app.categorie"> Gestion des catégories</a></li>
     <li><a ui-sref="app.type"> Gestion des sous catégories</a></li>
-    <li class="active" >Modifier une publication</li>
+    <li class="active" >Modifier une annonce</li>
   </ul>
 </div>
 
@@ -77,21 +77,78 @@
                 <label class="col-lg-2 control-label"  >Type d'article</label>
                 <div class="col-lg-8">
                     <select name="pub.type"  ng-model="pub.type" required class="form-control"  >
-                    <option value="Article">Article</option>
+                    <!--<option value="Article">Article</option>
                     <option value="Webinaire">Webinaire</option>
                     <option value="Annonce">Annonce</option>
                     <option value="Blog">Blog</option>
                     <option value="Slider">Slide show</option>
-                    <option value="Vidéo">Vidéo</option>
-                    
+                    <option value="Vidéo">Vidéo</option>-->
+                    <option value="Annonce">Annonce</option>
                 </select>
                </div>
              </div>
 
              <div class="form-group">
-               <label class="col-lg-2 control-label"  >Classement d'article</label>
+               <label class="col-lg-2 control-label"  >Classement</label>
                <div class="col-lg-8">
                 <input id="pub.level" type="text"  name="pub.level" class="form-control"  placeholder="Classement"   ng-model="pub.level"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Prix</label>
+               <div class="col-lg-8">
+                <input id="pub.prix" type="text"  name="pub.level" class="form-control"  placeholder="Prix"   ng-model="pub.prix"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Nombre de chambres</label>
+               <div class="col-lg-8">
+                <input id="pub.bedrooms" type="text"  name="pub.bedrooms" class="form-control"  placeholder="Nombre de chambres"   ng-model="pub.bedrooms"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Nombre de salles de bains</label>
+               <div class="col-lg-8">
+                <input id="pub.bathroom" type="text"  name="pub.bathroom" class="form-control"  placeholder="Nombre de salles de bains"   ng-model="pub.bathrooms"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Nombre de salles </label>
+               <div class="col-lg-8">
+                <input id="pub.halls" type="text"  name="pub.halls" class="form-control"  placeholder="Nombre de salles"   ng-model="pub.halls"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Surface en m2 </label>
+               <div class="col-lg-8">
+                <input id="pub.surface" type="text"  name="pub.surface" class="form-control"  placeholder="Surface en M2"   ng-model="pub.surface"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Nombre de garage </label>
+               <div class="col-lg-8">
+                <input id="pub.garage" type="text"  name="pub.garage" class="form-control"  placeholder="Nombre de garage"   ng-model="pub.garage"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Pays </label>
+               <div class="col-lg-8">
+                <input id="pub.pays" type="text"  name="pub.pays" class="form-control"  placeholder="Pays"   ng-model="pub.pays"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Ville </label>
+               <div class="col-lg-8">
+                <input id="pub.ville" type="text"  name="pub.ville" class="form-control"  placeholder="Ville"   ng-model="pub.ville"  />
+              </div> 
+            </div>
+            <div class="form-group">
+               <label class="col-lg-2 control-label"  >Adresse</label>
+               <div class="col-lg-8">
+                <textarea name="pub.important_msg" id="pub.address" class="form-control" 
+                ng-model="pub.address" cols="30" rows="3" placeholder="Adresse">
+                
+                </textarea>
               </div> 
             </div>
 

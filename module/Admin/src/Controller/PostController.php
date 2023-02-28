@@ -110,6 +110,7 @@ class PostController extends AbstractRestfulController
                      
                      //GET POST FORM
 
+                     
                      $postForm = new PostForm();
                      
                      $dataPosts['id_post'] = 0;
@@ -131,6 +132,24 @@ class PostController extends AbstractRestfulController
                      $dataPosts['filename'] = (isset($data->filename) && $data->filename != null) ?  $data->filename : null;
                      
                      $dataPosts['created_by'] = $user->getEmail();
+
+                     $dataPosts['address'] = (isset($data->address)) ? $data->address :  null;
+
+                     $dataPosts['bedrooms'] = (isset($data->bedrooms)) ? $data->bedrooms :  null;
+
+                     $dataPosts['bathrooms'] = (isset($data->bathrooms)) ? $data->bathrooms :  null;
+
+                     $dataPosts['halls'] = (isset($data->halls)) ? $data->halls :  null;
+
+                     $dataPosts['surface'] = (isset($data->surface)) ? $data->surface :  null;
+
+                     $dataPosts['garage'] = (isset($data->garage)) ? $data->garage :  null;
+
+                     $dataPosts['pays'] = (isset($data->pays)) ? $data->pays :  null;
+
+                     $dataPosts['ville'] = (isset($data->ville)) ? $data->ville :  null;
+
+                     $dataPosts['prix'] = (isset($data->prix)) ? $data->prix :  null;
                      
 
                      // SET INPUT FILTER 
@@ -231,6 +250,7 @@ class PostController extends AbstractRestfulController
 
                 }
                
+          
                 $dataPosts['id_post'] = $post_id;
                      
                 $dataPosts['title'] = (isset($data->title)) ? $data->title :  $post->getTitle();
@@ -250,6 +270,24 @@ class PostController extends AbstractRestfulController
                 $dataPosts['filename'] = (isset($data->filename)) ? $data->filename :  $post->getFilename();
                      
                 $dataPosts['created_by'] =  $user->getEmail() ;
+
+                $dataPosts['address'] = (isset($data->address)) ? $data->address :  $post->getAddress();
+
+                $dataPosts['bedrooms'] = (isset($data->bedrooms)) ? $data->bedrooms :   $post->getBedrooms();
+
+                $dataPosts['bathrooms'] = (isset($data->bathrooms)) ? $data->bathrooms :   $post->getBathrooms();
+
+                $dataPosts['halls'] = (isset($data->halls)) ? $data->halls :   $post->getHalls();
+
+                $dataPosts['surface'] = (isset($data->surface)) ? $data->surface :   $post->getSurface();
+
+                $dataPosts['garage'] = (isset($data->garage)) ? $data->garage :   $post->getGarage();
+
+                $dataPosts['pays'] = (isset($data->pays)) ? $data->pays :  $post->getPays();
+
+                $dataPosts['ville'] = (isset($data->ville)) ? $data->ville :  $post->getVille();
+
+                $dataPosts['prix'] = (isset($data->prix)) ? $data->prix :  $post->getPrix();
                 
  
  

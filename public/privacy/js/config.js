@@ -31,7 +31,7 @@ var app =  angular.module('app')
 
  
 
-app.constant('API_URL','http://localhost:8880/iitisde_enterprise/public');
+app.constant('API_URL','http://localhost/agence_im/public');
 app.value('MyVar','');
 
 

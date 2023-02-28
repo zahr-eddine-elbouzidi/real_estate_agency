@@ -28,7 +28,7 @@ class PostForm extends Form
            'name' => 'title',
            'type' => 'Text',
            'options' => array(
-               'label' => 'Name',      
+               'label' => 'title',      
            ),
            'attributes' => array(
                'class' => 'form-control'
@@ -39,7 +39,7 @@ class PostForm extends Form
         'name' => 'type',
         'type' => 'Text',
         'options' => array(
-            'label' => 'Tel',      
+            'label' => 'type',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -50,7 +50,7 @@ class PostForm extends Form
         'name' => 'content',
         'type' => 'Text',
         'options' => array(
-            'label' => 'GSM',      
+            'label' => 'content',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -61,7 +61,7 @@ class PostForm extends Form
         'name' => 'enabled',
         'type' => 'Text',
         'options' => array(
-            'label' => 'GSM',      
+            'label' => 'enabled',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -72,7 +72,7 @@ class PostForm extends Form
         'name' => 'slug',
         'type' => 'Text',
         'options' => array(
-            'label' => 'GSM',      
+            'label' => 'slug',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -106,7 +106,7 @@ class PostForm extends Form
         'name' => 'filename',
         'type' => 'Text',
         'options' => array(
-            'label' => 'Tel',      
+            'label' => 'filename',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -118,19 +118,116 @@ class PostForm extends Form
         'name' => 'subcategory_id',
         'type' => 'Text',
         'options' => array(
-            'label' => 'GSM',      
+            'label' => 'subcategory_id',      
         ),
         'attributes' => array(
             'class' => 'form-control'
         )
     ));
 
+    $this->add(array(
+        'name' => 'address',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Address',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
 
+    $this->add(array(
+        'name' => 'bedrooms',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Beds',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'bathrooms',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Bathrooms',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'halls',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Halls',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'surface',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Surface',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'garage',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Garage',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'pays',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Pays',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'ville',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Ville',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
+
+    $this->add(array(
+        'name' => 'prix',
+        'type' => 'Text',
+        'options' => array(
+            'label' => 'Prix',      
+        ),
+        'attributes' => array(
+            'class' => 'form-control'
+        )
+    ));
     $this->add(array(
         'name' => 'created_by',
         'type' => 'Text',
         'options' => array(
-            'label' => 'FB',      
+            'label' => 'created_by',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -141,7 +238,7 @@ class PostForm extends Form
         'name' => 'updated_at',
         'type' => 'Text',
         'options' => array(
-            'label' => 'Instagram',      
+            'label' => 'updated_at',      
         ),
         'attributes' => array(
             'class' => 'form-control'
@@ -149,9 +246,6 @@ class PostForm extends Form
     ));
 
 
-   
-     
-  
 
        $this->add(array(
            'name' =>'validate',

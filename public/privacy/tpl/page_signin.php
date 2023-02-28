@@ -2,7 +2,7 @@
 
 
   <center >
-    <img src="img/itisde_logo.png" width="350" class="img-circle" alt="IT Innovative Skills & Data Engineering">
+    <img src="img/123.png" width="350" class="img-circle" alt="Agence Immobilière">
 </center>
  
   

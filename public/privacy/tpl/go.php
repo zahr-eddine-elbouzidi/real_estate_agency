@@ -45,7 +45,7 @@
                 </a>
                 <div class="clear">
                   <div class="h4 m-t m-b-xs">G. Catégories</div>
-                  <small class="text-muted">La gestion des catégories, ajout ...</small>
+                  <small class="text-muted">La gestion des catégories, L'ajout ...</small>
                 </div>
 
                <!-- <div class="clear">
@@ -69,7 +69,7 @@
                 </a>
                 <div class="clear">
                   <div class="h4 m-t m-b-xs">G. Menu</div>
-                  <small class="text-muted">La gestion de menus, ajout...</small>
+                  <small class="text-muted">La gestion de menus, L'ajout...</small>
                 </div>
 
                <!-- <div class="clear">
@@ -91,8 +91,8 @@
                   <img src="img/share.png" alt="...">
                 </a>
                 <div class="clear">
-                  <div class="h4 m-t m-b-xs">Gestion d'articles</div>
-                  <small class="text-muted">Articles, Blogs, Vidéos, Images...</small>
+                  <div class="h4 m-t m-b-xs">Gestion des annonces</div>
+                  <small class="text-muted">Annonces, Blogs, Vidéos, Images...</small>
                 </div>
 
                 <!--<div class="clear">
@@ -115,8 +115,8 @@
                   <img src="img/grades.png" alt="...">
                 </a>
                 <div class="clear">
-                  <div class="h4 m-t m-b-xs">Candidats inscrits</div>
-                  <small class="text-muted">Gestion des candidats inscrits</small>
+                  <div class="h4 m-t m-b-xs">Gestion des inscrits</div>
+                  <small class="text-muted">Gestion des inscrits</small>
                 </div>
 
                 <!--<div class="clear">

@@ -39,7 +39,7 @@ app.settings.asideDock = true;
         <div class="col-xs-6">
           <a href class="block panel padder-v bg-primary item">
             <span class="text-white font-thin h1 block">{{ nbre_candidat }}</span>
-            <span class="text-muted text-xs" >Nombre de candidats inscrits</span>
+            <span class="text-muted text-xs" >Nombre de inscrits</span>
             <span class="bottom text-right w-full">
               <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
             </span>
@@ -48,7 +48,7 @@ app.settings.asideDock = true;
         <div class="col-xs-12">
           <a ui-sref="app.categorie" class="block panel padder-v bg-info item">
             <span class="text-white font-thin h1 block">1 </span>
-            <span class="text-muted text-xs">Module ITISDE </span>
+            <span class="text-muted text-xs">Module Agence Immobilière </span>
             <span class="top text-left">
               <i class="fa fa-caret-up text-warning m-l-sm"></i>
             </span>

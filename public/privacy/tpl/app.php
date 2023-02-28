@@ -29,7 +29,7 @@
   <!-- footer -->
   <div class="app-footer wrapper b-t bg-light">
     <span class="pull-right">{{app.version}} <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
-    <span><small class="text-muted">ITISDE | IT Innovative Skills & Data Engineering.</span><br><span> Tous droits réservés.</span> &copy; <?php echo date('Y'); ?> <br><span><small class="text-muted">Version {{app.version}}</small></span></small></span>
+    <span><small class="text-muted">Student Housing | Real Estate Agency</span><br><span> Tous droits réservés.</span> &copy; <?php echo date('Y'); ?> <br><span><small class="text-muted">Version {{app.version}}</small></span></small></span>
   </div>
   <!-- / footer -->
 

@@ -95,7 +95,7 @@
       <li ui-sref-active="active"  ng-if="admin && adminName=='admin' && (role=='Superviseur' || role=='SuperviseurT')" ng-class="{active:$state.includes('app.page')}">
         <a ui-sref="app.pubs">
           <i class="fa fa-share-alt icon text-primary-dker"></i>
-          <span>Publications</span>
+          <span>Annonces</span>
         </a>
       </li>
 
@@ -119,3 +119,4 @@
 
 </ul>
 <!-- / list -->
+ 

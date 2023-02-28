@@ -14,7 +14,7 @@ angular.module('app')
 
           //console.log(API_URL);
           //
-          $rootScope.BASE_URL = 'http://localhost:8880/iitisde_enterprise/public';
+          $rootScope.BASE_URL = 'http://localhost/agence_im/public';
 		 // $rootScope.BASE_URL = location.origin;
  
             if(angular.isDefined($rootScope.user) && $rootScope.user != ''){
@@ -177,40 +177,7 @@ angular.module('app')
    };
 
 
-
-  //loadCharts();
-
-  
-
-  
-
-
-
-
-
-
- /* $http.get(API_URL+'/modulesapp/availablemodules/'+$rootScope.user).
-  success(function(data, status, headers, config) {
-
-    angular.forEach(data.modulesavailable , function(value , key){
-
-     
-      if(value.module_code == "001"){
-
-        $rootScope.isNewsModule = true;
-        
-        
-      }else if(value.module_code == "002"){
-
-        $rootScope.isScolaireModule = true;
-        
-
-      } 
-    });          
-
-  });*/
-  
-  
+ 
   
   
   
@@ -220,7 +187,7 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: 'IT InnoSkills',
+        name: 'Student Housing',
         version: '1.0.1 Beta',
         // for chart colors
         color: {

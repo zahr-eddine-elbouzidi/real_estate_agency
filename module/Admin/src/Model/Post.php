@@ -18,6 +18,15 @@ class Post
    private $important_msg;
    private $filename;
    private $subcategory_id;
+   private $address;
+   private $bedrooms;
+   private $bathrooms;
+   private $halls;
+   private $surface;
+   private $garage;
+   private $pays;
+   private $ville;
+   private $prix;
    private $created_by;
    private $updated_at;
 
@@ -36,6 +45,15 @@ class Post
        $this->important_msg     = (!empty($data['important_msg'])) ? $data['important_msg'] : null;
        $this->filename     = (!empty($data['filename'])) ? $data['filename'] : null;
        $this->subcategory_id     = (!empty($data['subcategory_id'])) ? $data['subcategory_id'] : null;
+       $this->address     = (!empty($data['address'])) ? $data['address'] : null;
+       $this->bedrooms     = (!empty($data['bedrooms'])) ? $data['bedrooms'] : null;
+       $this->bathrooms     = (!empty($data['bathrooms'])) ? $data['bathrooms'] : null;
+       $this->halls     = (!empty($data['halls'])) ? $data['halls'] : null;
+       $this->surface     = (!empty($data['surface'])) ? $data['surface'] : null;
+       $this->garage     = (!empty($data['garage'])) ? $data['garage'] : null;
+       $this->pays     = (!empty($data['pays'])) ? $data['pays'] : null;
+       $this->ville     = (!empty($data['ville'])) ? $data['ville'] : null;
+       $this->prix     = (!empty($data['prix'])) ? $data['prix'] : null;
        $this->created_by     = (!empty($data['created_by'])) ? $data['created_by'] : null;
        $this->updated_at     = (!empty($data['updated_at'])) ? $data['updated_at'] : null;
    }
@@ -225,6 +243,178 @@ class Post
             ),
         ));
 
+        $inputFilter->add(array(
+            'name'     => 'address',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+
+        $inputFilter->add(array(
+            'name'     => 'bedrooms',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'bathrooms',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'halls',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'surface',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'garage',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));        
+        $inputFilter->add(array(
+            'name'     => 'pays',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'ville',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
+        $inputFilter->add(array(
+            'name'     => 'prix',
+            'required' => false,
+            'filters'  => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name'    => 'StringLength',
+        
+                    'options' => array(
+                        'encoding' => 'UTF-8',
+                        'min'      => 1,
+                        'max'      => 255,
+                    ),
+                ),
+            ),
+        ));
         $inputFilter->add(array(
             'name'     => 'created_by',
             'required' => false,
@@ -518,6 +708,168 @@ class Post
    public function setUpdated_at($updated_at)
    {
       $this->updated_at = $updated_at;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of address
+    */
+   public function getAddress()
+   {
+      return $this->address;
+   }
+
+   /**
+    * Set the value of address
+    */
+   public function setAddress($address)
+   {
+      $this->address = $address;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of bedrooms
+    */
+   public function getBedrooms()
+   {
+      return $this->bedrooms;
+   }
+
+   /**
+    * Set the value of bedrooms
+    */
+   public function setBedrooms($bedrooms)
+   {
+      $this->bedrooms = $bedrooms;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of bathrooms
+    */
+   public function getBathrooms()
+   {
+      return $this->bathrooms;
+   }
+
+   /**
+    * Set the value of bathrooms
+    */
+   public function setBathrooms($bathrooms)
+   {
+      $this->bathrooms = $bathrooms;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of halls
+    */
+   public function getHalls()
+   {
+      return $this->halls;
+   }
+
+   /**
+    * Set the value of halls
+    */
+   public function setHalls($halls)
+   {
+      $this->halls = $halls;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of surface
+    */
+   public function getSurface()
+   {
+      return $this->surface;
+   }
+
+   /**
+    * Set the value of surface
+    */
+   public function setSurface($surface)
+   {
+      $this->surface = $surface;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of garage
+    */
+   public function getGarage()
+   {
+      return $this->garage;
+   }
+
+   /**
+    * Set the value of garage
+    */
+   public function setGarage($garage)
+   {
+      $this->garage = $garage;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of pays
+    */
+   public function getPays()
+   {
+      return $this->pays;
+   }
+
+   /**
+    * Set the value of pays
+    */
+   public function setPays($pays)
+   {
+      $this->pays = $pays;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of ville
+    */
+   public function getVille()
+   {
+      return $this->ville;
+   }
+
+   /**
+    * Set the value of ville
+    */
+   public function setVille($ville)
+   {
+      $this->ville = $ville;
+
+      return $this;
+   }
+
+   /**
+    * Get the value of prix
+    */
+   public function getPrix()
+   {
+      return $this->prix;
+   }
+
+   /**
+    * Set the value of prix
+    */
+   public function setPrix($prix)
+   {
+      $this->prix = $prix;
 
       return $this;
    }

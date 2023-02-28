@@ -24,10 +24,10 @@
 
 <div class="bg-light lter b-b wrapper-md"  >
   <div>
-   <h4>Gestion d'articles</h4>
+   <h4>Gestion des annonces</h4>
    <ul class="breadcrumb bg-white b-a">
     <li><a ui-sref="app.dashboard-v1"><i class="fa fa-home"></i> Accueil</a></li>
-    <li class="active" >Gestion d'articles</li>
+    <li class="active" >Gestion des annonces</li>
   </ul>
 </div>
 
@@ -54,7 +54,7 @@
 
 
  <div class="row">
-    <div class="col-sm-4" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | filter: search | orderBy:sortType:sortReverse">
+    <div class="col-sm-3" ng-repeat="post in posts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | filter: search | orderBy:sortType:sortReverse">
       <div class="blog-post">                   
         <div class="panel">
 
@@ -65,17 +65,28 @@
       
           <div class="wrapper-lg">
             <h2 class="m-t-none text-ellipsis"><a href>{{post.title}}</a></h2>
-            <div>
+            <!--<div>
                 <p class="perso-ellipsis" ng-bind-html="returnText(post.content)"></p>
-            </div>
+            </div>-->
             <div class="line line-lg b-b b-light"></div>
             <div class="text-muted">
-              <i class="fa fa-user text-muted"></i> par <a href class="m-r-sm">{{ post.created_by}}</a>
-              <i class="fa fa-clock-o text-muted"></i> {{ post.created_at}} <span class="pull-right">
-                <span ng-if="post.post_enabled == 1"><i class="glyphicon glyphicon-ok text-success"></i></span>
-                <span ng-if="post.post_enabled == 0"><i class="glyphicon glyphicon-remove text-danger"></i></span></span>
-              <!--<a href class="m-l-sm"><i class="fa fa-comment-o text-muted"></i> 2 comments</a>-->
-            </div>
+              <i class="fa fa-user text-muted"></i> par <a href class="m-r-sm">{{ post.created_by}}</a><br />
+              <i class="fa fa-clock-o text-muted"></i> {{ post.created_at}} 
+                <span class="pull-right">
+                  <span ng-if="post.post_enabled == 1"><i class="glyphicon glyphicon-ok text-success"></i></span>
+                  <span ng-if="post.post_enabled == 0"><i class="glyphicon glyphicon-remove text-danger"></i></span>
+                </span>
+                <br/>
+                <span><i class="fa fa-money text-muted"></i><a href class="m-l-md">{{ post.prix}} DH</a></span>
+                <br/>
+                <span><i class="glyphicon glyphicon-ok text-muted"></i><a href class="m-l-md">{{ post.bedrooms}} Chambre(s)</a></span>
+                <br/>
+                <span><i class="glyphicon glyphicon-ok text-muted"></i><a href class="m-l-md">{{ post.bathrooms}} Salle(s) de bain(s)</a></span>
+                <br/>
+                <span><i class="glyphicon glyphicon-ok text-muted"></i><a href class="m-l-md">{{ post.halls}} Salle(s)</a></span>
+                <br/>
+                <span><i class="glyphicon glyphicon-ok text-muted"></i><a href class="m-l-md">{{ post.garage}} Garage(s)</a></span>
+              </div>
             <div class="line line-lg b-b b-light"></div>
             <a class="btn btn-primary btn-xs"  ng-click="getElement(post)" title="{{'operations.EDITOP' | translate}}" > Modifier <i class="fa fa-edit"></i></a>  
             <a class="btn btn-danger btn-xs"  data-record-id="{{post.id_post}}" data-record-title="{{post.title}} de type : {{post.type}}"

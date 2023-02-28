@@ -140,8 +140,8 @@ class IndexController extends AbstractRestfulController
 
                 $config = [
                     "driver" => "Pdo_Mysql",
-                    "database" => "iew",
-                    "username" => "zahr",
+                    "database" => "agenceimm",
+                    "username" => "root",
                     "password" => ""
                 ];
 

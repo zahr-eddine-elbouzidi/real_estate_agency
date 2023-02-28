@@ -16,7 +16,7 @@ use Laminas\Db\Adapter\AdapterAbstractServiceFactory;
 return [
     'db' => [
         'driver'         => 'Pdo',
-        'dsn'            => 'mysql:dbname=itisde;host=localhost:8889',
+        'dsn'            => 'mysql:dbname=agenceimm;host=localhost',
         'charset'        => 'utf-8',
         'driver_options' => [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''

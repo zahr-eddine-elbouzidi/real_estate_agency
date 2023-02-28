@@ -283,6 +283,15 @@ uploader.clear = function(){
           'level':$scope.pub.level, 
           'important_msg':$scope.pub.important_msg, 
           'subcategory_id' : $scope.pub.subcategory_id,                         
+          'address' : $scope.pub.address,                         
+          'bedrooms' : $scope.pub.bedrooms,                         
+          'bathrooms' : $scope.pub.bathrooms,                         
+          'halls'     : $scope.pub.halls,                         
+          'surface'     : $scope.pub.surface,                         
+          'garage'     : $scope.pub.garage,                         
+          'pays'     : $scope.pub.pays,                         
+          'ville'     : $scope.pub.ville,                         
+          'prix'     : $scope.pub.prix,                         
           'created_by':$rootScope.user,
           'filename' : $scope.filename
          }).success(function(data, status, headers, config) {
@@ -592,13 +601,22 @@ uploader.clear = function(){
       $http.get(API_URL+'/posts/getPost/'+$stateParams.id)
         .success(function(response, status, headers, config) {
 
-
+          console.log(response.data);
           $scope.pub = response.data;
           $scope.pub.type = response.data.type;
           $scope.pub.title = response.data.title;
           $scope.pub.content = response.data.content;
           $scope.pub.level = response.data.level;
           $scope.pub.important_msg = response.data.important_msg;
+          $scope.pub.address = response.data.address;                        
+          $scope.pub.bedrooms =  response.data.bedrooms;                        
+          $scope.pub.bathrooms = response.data.bathrooms;                       
+          $scope.pub.halls = response.data.halls;                       
+          $scope.pub.surface = response.data.surface;                       
+          $scope.pub.garage = response.data.garage;                       
+          $scope.pub.pays = response.data.pays;                       
+          $scope.pub.ville = response.data.ville;                       
+          $scope.pub.prix = response.data.prix;                       
 
           if(response.data.enabled === "1"){
             $scope.pub.enabled = true;
@@ -628,7 +646,16 @@ uploader.clear = function(){
           'enabled':$scope.pub.enabled, 
           'level':$scope.pub.level, 
           'important_msg':$scope.pub.important_msg, 
-          'subcategory_id' : $scope.pub.subcategory_id,                         
+          'subcategory_id' : $scope.pub.subcategory_id,   
+          'address' : $scope.pub.address,                         
+          'bedrooms' : $scope.pub.bedrooms,                         
+          'bathrooms' : $scope.pub.bathrooms,                         
+          'halls'     : $scope.pub.halls,                         
+          'surface'     : $scope.pub.surface,                         
+          'garage'     : $scope.pub.garage,                         
+          'pays'     : $scope.pub.pays,                         
+          'ville'     : $scope.pub.ville,                         
+          'prix'     : $scope.pub.prix,                         
           'created_by':$rootScope.user,
           'filename' : $scope.filename
          }).success(function(data, status, headers, config) {
