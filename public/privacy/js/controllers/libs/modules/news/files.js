@@ -91,7 +91,7 @@ function($scope, $rootScope, $http,$state,$stateParams, $location,
                      }).success(function(data, status, headers, config) {
                        $rootScope.loader = false;
                        load();
-                       $location.path('/app/files');
+                       $state.go('app.files',{id : $stateParams.id});
                        toaster.pop('success','Information', '<br>'+"L'opération a été bien effectuée."+'<br><br>' + 
                          '<hr /><i style="font-size: 0.7em;">'+$scope.app.name+' - Version :'+$scope.app.version+'</i>', 
                          0, 'trustedHtml', null, "note-toaster-container");
