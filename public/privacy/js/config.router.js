@@ -1433,11 +1433,11 @@ angular.module('app')
 
               .state('app.files', {
                   url: '/files/:id',
-                  templateUrl: 'tpl/modules/hires/listFiles.php',
+                  templateUrl: 'tpl/modules/news/files/index.php',
                     data: {
                       requireLogin: true,
                       requiredRole: ['admin'],
-                      requiredType: ['Admin','Superviseur','Ministère','Commission']
+                      requiredType: ['SuperviseurT']
                     },
                     resolve: {
                         deps: ['uiLoad','$ocLazyLoad',
@@ -1445,7 +1445,7 @@ angular.module('app')
 
                              return $ocLazyLoad.load('angularFileUpload').then(
                                 function(){
-                                    return uiLoad.load( ['js/controllers/libs/modules/hires/posts/hires.js',
+                                    return uiLoad.load( ['js/controllers/libs/modules/news/files.js',
                                                  'vendor/libs/moment.min.js'] );
                                 }
                               );
@@ -1455,6 +1455,31 @@ angular.module('app')
                 
                  
               })
+
+              .state('app.addFile', {
+                url: '/files/add/:id',
+                templateUrl: 'tpl/modules/news/files/add.php',
+                  data: {
+                    requireLogin: true,
+                    requiredRole: ['admin'],
+                    requiredType: ['SuperviseurT']
+                  },
+                  resolve: {
+                      deps: ['uiLoad','$ocLazyLoad',
+                        function( uiLoad ,$ocLazyLoad){
+
+                           return $ocLazyLoad.load('angularFileUpload').then(
+                              function(){
+                                  return uiLoad.load( ['js/controllers/libs/modules/news/files.js',
+                                               'vendor/libs/moment.min.js'] );
+                              }
+                            );
+                      }]
+                        
+                  }
+              
+               
+            })
 
               .state('app.my-files', {
                   url: '/my-files/:id_hire',

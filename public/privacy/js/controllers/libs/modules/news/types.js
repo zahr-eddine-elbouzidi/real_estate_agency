@@ -176,12 +176,12 @@ app.controller('SubCategoryListCtrl',['$scope', '$rootScope', '$http','$state','
 }
 
 
-
+ 
 
 $scope.getElement=function(type){
 
  
- $state.go('app.editSubCategory', { id : type.id });
+ $state.go('app.editSubCategory', { id : type.id_subcat });
 
 };
 

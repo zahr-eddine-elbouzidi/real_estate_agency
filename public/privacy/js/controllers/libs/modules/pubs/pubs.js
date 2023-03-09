@@ -329,6 +329,15 @@ uploader.clear = function(){
  
          } 
 
+         $scope.getImages=function(pub){
+
+   
+          $state.go('app.files',{id : pub.id_post});
+
+       } 
+
+
+         
 
   
          $scope.deletePub = function() {

@@ -32,19 +32,14 @@ class FiliereController extends AbstractRestfulController
  private $hydrator;
 
 
- // Add this constructor:
- public function __construct(FiliereTable $filiereTable , UsersTable $usersTable)
- {
-     $this->filiereTable = $filiereTable;
-     $this->usersTable = $usersTable;
-     $this->hydrator  = new Hydrator\ArraySerializableHydrator();
-      
- }
-
-
-
-
-
+    // Add this constructor:
+    public function __construct(FiliereTable $filiereTable , UsersTable $usersTable)
+    {
+        $this->filiereTable = $filiereTable;
+        $this->usersTable = $usersTable;
+        $this->hydrator  = new Hydrator\ArraySerializableHydrator();
+          
+    }
 
     public function getListAction()
     { 

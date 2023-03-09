@@ -82,6 +82,21 @@ return [
             ], 
          ], 
 
+         'files' => [ 
+            'type' => Segment::class,
+            'options' => [ 
+               'route' => '/files[/:action][/:id][/:name]',
+               'constraints' => [
+                  'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+               ], 
+               'defaults' => [ 
+                  'controller' => Controller\FileController::class,
+                  'action' => 'index', 
+               ], 
+            ], 
+         ], 
+
+
 
          'inscriptions' => [ 
             'type' => Segment::class,

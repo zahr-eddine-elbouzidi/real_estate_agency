@@ -64,7 +64,7 @@
             <label class="col-lg-2 control-label" >Nom en (Eng)</label>
             <div class="col-lg-8">
              
-              <input id="sub_name_eng" type="text" name="type.sub_name_eng" class="form-control" placeholder="{{'type.titles.NAMETYPE' | translate}}" required ng-model="type.sub_name_eng" />
+              <input id="sub_name_eng" type="text" name="type.sub_name_eng" class="form-control" placeholder="{{'type.titles.NAMETYPE' | translate}}"  ng-model="type.sub_name_eng" />
 
             </div>
           </div>
@@ -73,7 +73,7 @@
             <label class="col-lg-2 control-label" >Nom (Arabe)</label>
             <div class="col-lg-8">
              
-              <input id="sub_name_ar" type="text" name="type.sub_name_ar" style="text-align: right;" class="form-control" required ng-model="type.sub_name_ar" />
+              <input id="sub_name_ar" type="text" name="type.sub_name_ar" style="text-align: right;" class="form-control"  ng-model="type.sub_name_ar" />
 
             </div>
           </div>

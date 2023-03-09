@@ -84,7 +84,7 @@
 <label class="col-lg-2 control-label"  >Sous catégorie (Eng)</label>
 
 <div class="col-lg-8">
-  <input   type="text" id="sub_name_eng"   class="form-control" ng-model="subCategoryEdit.sub_name_eng" placeholder="{{'type.titles.NAMETYPE' | translate}}" required  />
+  <input   type="text" id="sub_name_eng"   class="form-control" ng-model="subCategoryEdit.sub_name_eng" placeholder="{{'type.titles.NAMETYPE' | translate}}"   />
 </div> 
 
 </div> 
@@ -95,7 +95,7 @@
 
      <div class="col-lg-8">
       
-       <input   type="text" id="sub_name_ar" style="text-align: right;"  class="form-control" ng-model="subCategoryEdit.sub_name_ar"   required  />
+       <input   type="text" id="sub_name_ar" style="text-align: right;"  class="form-control" ng-model="subCategoryEdit.sub_name_ar"     />
      </div> 
 
    </div> 

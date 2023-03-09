@@ -381,7 +381,7 @@ $dataPosts['sub_category_id'] = (isset($data->sub_category_id)) ? $data->sub_cat
             $subcategory_id = $this->params()->fromRoute('id', 0);  
 
             $subcategory_object = $this->subcatTable->getSubCategory($subcategory_id);
-
+            
             return new JsonModel([
               
               'data' => $this->hydrator->extract($subcategory_object)]

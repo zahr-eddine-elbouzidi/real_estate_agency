@@ -91,6 +91,7 @@
             <a class="btn btn-primary btn-xs"  ng-click="getElement(post)" title="{{'operations.EDITOP' | translate}}" > Modifier <i class="fa fa-edit"></i></a>  
             <a class="btn btn-danger btn-xs"  data-record-id="{{post.id_post}}" data-record-title="{{post.title}} de type : {{post.type}}"
       data-toggle="modal" data-target="#confirm-delete" ng-click="deletePub()" title="{{'operations.DELETEOP' | translate}}">Supprimer <i class="glyphicon glyphicon-remove"></i></a>
+            <a  ng-click="getImages(post)" class="btn btn-default btn-xs pull-right">Gérer les images</a>
           </div>
           </div>
         </div>

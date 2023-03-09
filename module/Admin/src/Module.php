@@ -32,6 +32,13 @@ class Module implements ConfigProviderInterface {
                     );
                 },
 
+                Controller\FileController::class => function($container) {
+                    return new Controller\FileController(
+                        $container->get(Model\FileTable::class),
+                        $container->get(Model\UsersTable::class)
+                    );
+                },
+
                 Controller\EtablissementController::class => function($container) {
                     return new Controller\EtablissementController(
                         $container->get(Model\EtablissementTable::class),
@@ -157,6 +164,22 @@ class Module implements ConfigProviderInterface {
                     $resultSetPrototype->setArrayObjectPrototype(new Model\Categorie());
                     return new TableGateway('category', $dbAdapter, null, $resultSetPrototype);
                 },
+
+
+                  /**
+                 * File table injection
+                 */
+                Model\FileTable::class => function($container) {
+                    $tableGateway = $container->get(Model\FileTableGateway::class);
+                    return new Model\FileTable($tableGateway);
+                },
+                Model\FileTableGateway::class => function ($container) {
+                    $dbAdapter = $container->get(AdapterInterface::class);
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Model\File());
+                    return new TableGateway('files', $dbAdapter, null, $resultSetPrototype);
+                },
+
 
 
                    /**
